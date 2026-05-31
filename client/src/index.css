@@ -1,0 +1,224 @@
+/* 
+ * ACON Academy — Neo-Institutional Modernism
+ * Design Philosophy: Deep navy authority + bright blue accent + Playfair Display headings
+ * EXACT Brand Colors from aconacademy.ca:
+ *   Primary Navy: rgb(9, 39, 88) = #092758
+ *   Bright Blue Accent: #1F6AAD (medium blue for CTAs/highlights)
+ *   Background: rgb(255, 251, 248) = #FFFBF8 warm white
+ *   Dark Text: rgb(29, 26, 23) = #1D1A17
+ *   Light Blue Tint: rgb(221, 236, 255) = #DDECFF
+ * Typography: Playfair Display (headings) + Source Sans 3 (body/UI)
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* ACON Custom Tokens */
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-navy-light: var(--navy-light);
+  --color-blue-accent: var(--blue-accent);
+  --color-blue-light: var(--blue-light);
+  --color-ivory: var(--ivory);
+  --color-charcoal: var(--charcoal);
+}
+
+:root {
+  /* ACON Brand Colors — Exact from aconacademy.ca */
+  --navy: oklch(0.19 0.08 255);            /* #092758 = rgb(9, 39, 88) exact nav blue */
+  --navy-dark: oklch(0.13 0.06 255);       /* #051A40 darkest navy */
+  --navy-light: oklch(0.30 0.09 255);      /* #1a3a6e lighter navy */
+  --blue-accent: oklch(0.48 0.14 255);     /* #1F6AAD medium blue for CTAs */
+  --blue-light: oklch(0.92 0.04 255);      /* #DDECFF = rgb(221, 236, 255) light blue tint */
+  --ivory: oklch(0.99 0.004 85);           /* #FFFBF8 = rgb(255, 251, 248) warm white bg */
+  --charcoal: oklch(0.17 0.01 50);         /* #1D1A17 = rgb(29, 26, 23) dark text */
+  
+  /* Semantic Colors */
+  --radius: 0.25rem;
+  --background: oklch(0.99 0.004 85);      /* warm ivory #FFFBF8 */
+  --foreground: oklch(0.17 0.01 50);       /* charcoal #1D1A17 */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.17 0.01 50);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.17 0.01 50);
+  --primary: oklch(0.19 0.08 255);         /* navy #092758 */
+  --primary-foreground: oklch(0.99 0.004 85);
+  --secondary: oklch(0.48 0.14 255);       /* blue accent */
+  --secondary-foreground: oklch(0.99 0 0);
+  --muted: oklch(0.95 0.01 255);
+  --muted-foreground: oklch(0.45 0.04 255);
+  --accent: oklch(0.48 0.14 255);          /* blue accent */
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.90 0.01 255);
+  --input: oklch(0.90 0.01 255);
+  --ring: oklch(0.19 0.08 255);
+  --chart-1: oklch(0.19 0.08 255);
+  --chart-2: oklch(0.48 0.14 255);
+  --chart-3: oklch(0.35 0.10 255);
+  --chart-4: oklch(0.65 0.12 255);
+  --chart-5: oklch(0.80 0.06 255);
+  --sidebar: oklch(0.19 0.08 255);
+  --sidebar-foreground: oklch(0.99 0.004 85);
+  --sidebar-primary: oklch(0.48 0.14 255);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.30 0.09 255);
+  --sidebar-accent-foreground: oklch(0.99 0.004 85);
+  --sidebar-border: oklch(0.30 0.09 255);
+  --sidebar-ring: oklch(0.48 0.14 255);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* ACON Custom Components — Blue/White Institutional Theme */
+  .acon-navy-bg {
+    background-color: oklch(0.19 0.08 255);  /* #092758 */
+    color: oklch(0.99 0.004 85);
+  }
+  
+  .acon-blue-rule {
+    height: 3px;
+    background: linear-gradient(90deg, oklch(0.19 0.08 255) 0%, oklch(0.48 0.14 255) 50%, oklch(0.19 0.08 255) 100%);
+  }
+
+  .acon-gold-rule {
+    height: 3px;
+    background: linear-gradient(90deg, oklch(0.19 0.08 255) 0%, oklch(0.48 0.14 255) 50%, oklch(0.19 0.08 255) 100%);
+  }
+  
+  .acon-section-fade {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .acon-section-fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .acon-program-card {
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+  }
+  
+  .acon-program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(9, 39, 88, 0.15);
+  }
+
+  .acon-nav-dropdown {
+    transform-origin: top center;
+    animation: dropdownOpen 0.2s ease-out forwards;
+  }
+  
+  @keyframes dropdownOpen {
+    from {
+      opacity: 0;
+      transform: scaleY(0.95) translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: scaleY(1) translateY(0);
+    }
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  .font-body {
+    font-family: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+  }
+}
