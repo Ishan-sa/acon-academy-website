@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-
+    
     <!-- Primary SEO -->
     <title>ACON Academy — Canada's Premier French Language Academy | Surrey & Kelowna BC</title>
     <meta name="description" content="ACON Academy offers professional French language programs in Surrey and Kelowna, BC. CLB-5 French Foundations, CLB-7 Intermediate/Advanced, TEF/TCF exam preparation, and French for Canadian PR. Bonjour to fluency." />
@@ -12,7 +12,7 @@
     <meta name="author" content="ACON Academy" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://www.aconacademy.ca/" />
-
+    
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.aconacademy.ca/" />
@@ -23,19 +23,19 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name" content="ACON Academy" />
     <meta property="og:locale" content="en_CA" />
-
+    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ACON Academy — Canada's Premier French Language Academy" />
     <meta name="twitter:description" content="Professional French language programs in Surrey and Kelowna, BC. CLB-5, CLB-7, TEF/TCF exam prep. Bonjour to fluency." />
     <meta name="twitter:image" content="https://d2xsxph8kpxj0f.cloudfront.net/310519663480738443/B3Y5SMixrbkaoFoKhLHJR4/acon-hero-1-bnHg9UegJUWWbBw7x5ngZi.webp" />
-
+    
     <!-- Geo & Language -->
     <meta name="geo.region" content="CA-BC" />
     <meta name="geo.placename" content="Surrey, British Columbia, Canada" />
     <meta name="language" content="English" />
     <link rel="alternate" hreflang="en-ca" href="https://www.aconacademy.ca/" />
-
+    
     <!-- Structured Data: Organization -->
     <script type="application/ld+json">
     {
@@ -105,7 +105,7 @@
       }
     }
     </script>
-
+    
     <!-- Structured Data: Local Business (Surrey) -->
     <script type="application/ld+json">
     {
@@ -140,10 +140,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    <!--
+      Optional Umami analytics was removed because it requires analytics env
+      vars that aren't configured; leaving the placeholders in shipped a broken
+      <script> tag. To re-enable, add a script that reads your Umami endpoint
+      and website id (e.g. via VITE_ANALYTICS_ENDPOINT / VITE_ANALYTICS_WEBSITE_ID
+      env vars set in Vercel).
+    -->
   </body>
 
 </html>
