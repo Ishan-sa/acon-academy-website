@@ -1,0 +1,14 @@
+{
+  "name": "ACON Academy",
+  "short_name": "ACON",
+  "description": "Canada's premier French language academy — Surrey & Kelowna, BC.",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" }
+  ],
+  "theme_color": "#092758",
+  "background_color": "#092758",
+  "display": "standalone",
+  "start_url": "/"
+}
