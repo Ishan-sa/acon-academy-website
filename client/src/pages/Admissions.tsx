@@ -2,6 +2,8 @@
  * ACON Academy Admissions Page — Neo-Institutional Modernism
  */
 import { useState } from "react";
+import { toast } from "sonner";
+import { submitToFormspree } from "@/lib/formspree";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
@@ -81,11 +83,16 @@ export default function Admissions() {
     return e;
   };
 
-  const handleSubmit = (ev: React.FormEvent) => {
+  const handleSubmit = async (ev: React.FormEvent) => {
     ev.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
-    setSubmitted(true);
+    const ok = await submitToFormspree(form, "Admissions Inquiry");
+    if (ok) {
+      setSubmitted(true);
+    } else {
+      toast.error("Something went wrong. Please try again or email us at info@aconacademy.ca.");
+    }
   };
 
   return (

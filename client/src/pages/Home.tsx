@@ -470,7 +470,7 @@ export default function Home() {
             <AnimatedSection>
               <div className="relative">
                 <img
-                  src="/manus-storage/campus_classroom2_63399c3f.jpg"
+                  src="/manus-storage/acon-classroom-whiteboard.png"
                   alt="French language learning at ACON Academy"
                   className="w-full h-[480px] object-cover rounded-sm shadow-xl"
                 />

@@ -7,6 +7,7 @@ import { Link } from "wouter";
 import { ChevronRight, Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import { submitToFormspree } from "@/lib/formspree";
 
 function isValidEmail(email: string): boolean {
   const re = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
@@ -53,17 +54,20 @@ export default function Contact() {
     return e;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) { setErrors(errs); return; }
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
+    const ok = await submitToFormspree(form, "Contact Form");
+    setSubmitting(false);
+    if (ok) {
       toast.success("Message sent! Our team will contact you within 1–2 business days.");
       setForm({ name: "", email: "", phone: "", campus: "", subject: "", message: "" });
       setErrors({});
-    }, 1200);
+    } else {
+      toast.error("Something went wrong. Please try again or email us directly at info@aconacademy.ca.");
+    }
   };
 
   return (

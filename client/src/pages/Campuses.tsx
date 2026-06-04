@@ -44,7 +44,7 @@ export default function Campuses() {
                   <Clock size={18} className="text-[rgb(31,106,173)] mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-body font-semibold text-[rgb(9,39,88)]">Campus Hours</div>
-                    <div className="text-sm font-body text-[rgb(60,80,110)]">Monday–Friday: 9:00 AM – 11:00 PM<br />Saturday–Sunday: 9:00 AM – 9:30 PM</div>
+                    <div className="text-sm font-body text-[rgb(60,80,110)]">Monday–Sunday: 9:00 AM – 10:00 PM</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -94,14 +94,14 @@ export default function Campuses() {
                   <Clock size={18} className="text-[rgb(31,106,173)] mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-body font-semibold text-[rgb(9,39,88)]">Campus Hours</div>
-                    <div className="text-sm font-body text-[rgb(60,80,110)]">Wednesday–Thursday: 4:00 PM – 7:30 PM<br />Saturday–Sunday: 1:00 PM – 7:30 PM</div>
+                    <div className="text-sm font-body text-[rgb(60,80,110)]">Monday–Sunday: 9:00 AM – 8:00 PM</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <Mail size={18} className="text-[rgb(31,106,173)] mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-body font-semibold text-[rgb(9,39,88)]">Email</div>
-                    <a href="mailto:kelowna@aconacademy.ca" className="text-sm font-body text-[rgb(60,80,110)] hover:text-[rgb(31,106,173)] transition-colors">kelowna@aconacademy.ca</a>
+                    <a href="mailto:infokelowna@aconacademy.ca" className="text-sm font-body text-[rgb(60,80,110)] hover:text-[rgb(31,106,173)] transition-colors">infokelowna@aconacademy.ca</a>
                   </div>
                 </div>
               </div>

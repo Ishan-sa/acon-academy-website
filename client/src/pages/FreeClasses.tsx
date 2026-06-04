@@ -9,6 +9,7 @@ import { Link } from "wouter";
 import { ChevronRight, CheckCircle, ArrowRight, Calendar, Users, Star, Shield, Clock, Award } from "lucide-react";
 import { useState, useRef } from "react";
 import { toast } from "sonner";
+import { submitToFormspree } from "@/lib/formspree";
 
 const upcomingClasses = [
   { date: "May 17, 2026", time: "11:30 AM – 1:00 PM", campus: "Surrey", spots: 8, level: "Beginner (A1)" },
@@ -126,7 +127,7 @@ export default function FreeClasses() {
     handleChange("phone", formatPhone(value));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const allTouched = Object.keys(form).reduce((acc, k) => ({ ...acc, [k]: true }), {});
     setTouched(allTouched);
@@ -137,10 +138,13 @@ export default function FreeClasses() {
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
+    const ok = await submitToFormspree(form, "Free Classes Registration");
+    setSubmitting(false);
+    if (ok) {
       setSubmitted(true);
-    }, 1400);
+    } else {
+      toast.error("Something went wrong. Please try again or email us at info@aconacademy.ca.");
+    }
   };
 
   const inputClass = (field: keyof FormData) =>
