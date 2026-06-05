@@ -11,21 +11,12 @@ import { useState, useRef } from "react";
 import { toast } from "sonner";
 import { submitToFormspree } from "@/lib/formspree";
 
-const upcomingClasses = [
-  { date: "May 17, 2026", time: "11:30 AM – 1:00 PM", campus: "Surrey", spots: 8, level: "Beginner (A1)" },
-  { date: "May 20, 2026", time: "8:00 PM – 9:30 PM", campus: "Surrey", spots: 5, level: "Intermediate (A2/B1)" },
-  { date: "May 22, 2026", time: "1:00 PM – 2:30 PM", campus: "Kelowna", spots: 10, level: "Beginner (A1)" },
-  { date: "May 24, 2026", time: "9:30 AM – 11:00 AM", campus: "Surrey", spots: 12, level: "All Levels" },
-  { date: "May 27, 2026", time: "6:00 PM – 7:30 PM", campus: "Kelowna", spots: 7, level: "Beginner (A1)" },
-  { date: "May 29, 2026", time: "8:00 PM – 9:30 PM", campus: "Surrey", spots: 9, level: "Advanced (B1/B2)" },
-];
 
 type FormData = {
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
-  classDate: string;
   campus: string;
   frenchLevel: string;
   goal: string;
@@ -73,7 +64,7 @@ export default function FreeClasses() {
   const formRef = useRef<HTMLDivElement>(null);
   const [form, setForm] = useState<FormData>({
     firstName: "", lastName: "", email: "", phone: "",
-    classDate: "", campus: "", frenchLevel: "", goal: "",
+    campus: "", frenchLevel: "", goal: "",
     howHeard: "", canadianStatus: "", availability: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
@@ -99,7 +90,6 @@ export default function FreeClasses() {
     } else if (!isValidPhone(data.phone)) {
       errs.phone = "Please enter a valid 10-digit Canadian or US phone number.";
     }
-    if (!data.classDate) errs.classDate = "Please select a class date.";
     if (!data.campus) errs.campus = "Please select your preferred campus.";
     if (!data.frenchLevel) errs.frenchLevel = "Please select your current French level.";
     if (!data.goal) errs.goal = "Please tell us your main goal — this helps us place you correctly.";
@@ -278,43 +268,22 @@ export default function FreeClasses() {
                       )}
                     </div>
 
-                    {/* Campus + Class Date row */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-xs font-body font-semibold text-[rgb(40,55,80)] mb-1.5 uppercase tracking-wide">Campus *</label>
-                        <select
-                          value={form.campus}
-                          onChange={e => handleChange("campus", e.target.value)}
-                          onBlur={() => handleBlur("campus")}
-                          className={inputClass("campus")}
-                        >
-                          <option value="">Select</option>
-                          <option value="Surrey">Surrey</option>
-                          <option value="Kelowna">Kelowna</option>
-                        </select>
-                        {touched.campus && errors.campus && (
-                          <p className="text-red-500 text-xs mt-1 font-body">{errors.campus}</p>
-                        )}
-                      </div>
-                      <div>
-                        <label className="block text-xs font-body font-semibold text-[rgb(40,55,80)] mb-1.5 uppercase tracking-wide">Class Date *</label>
-                        <select
-                          value={form.classDate}
-                          onChange={e => handleChange("classDate", e.target.value)}
-                          onBlur={() => handleBlur("classDate")}
-                          className={inputClass("classDate")}
-                        >
-                          <option value="">Select</option>
-                          {upcomingClasses.map((cls, i) => (
-                            <option key={i} value={`${cls.date} - ${cls.campus}`}>
-                              {cls.date} — {cls.campus}
-                            </option>
-                          ))}
-                        </select>
-                        {touched.classDate && errors.classDate && (
-                          <p className="text-red-500 text-xs mt-1 font-body">{errors.classDate}</p>
-                        )}
-                      </div>
+                    {/* Campus */}
+                    <div>
+                      <label className="block text-xs font-body font-semibold text-[rgb(40,55,80)] mb-1.5 uppercase tracking-wide">Campus *</label>
+                      <select
+                        value={form.campus}
+                        onChange={e => handleChange("campus", e.target.value)}
+                        onBlur={() => handleBlur("campus")}
+                        className={inputClass("campus")}
+                      >
+                        <option value="">Select</option>
+                        <option value="Surrey">Surrey</option>
+                        <option value="Kelowna">Kelowna</option>
+                      </select>
+                      {touched.campus && errors.campus && (
+                        <p className="text-red-500 text-xs mt-1 font-body">{errors.campus}</p>
+                      )}
                     </div>
 
                     {/* French Level */}
