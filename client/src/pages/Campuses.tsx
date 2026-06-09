@@ -94,7 +94,7 @@ export default function Campuses() {
                   <Clock size={18} className="text-[rgb(31,106,173)] mt-0.5 flex-shrink-0" />
                   <div>
                     <div className="font-body font-semibold text-[rgb(9,39,88)]">Campus Hours</div>
-                    <div className="text-sm font-body text-[rgb(60,80,110)]">Monday–Sunday: 9:00 AM – 8:00 PM</div>
+                    <div className="text-sm font-body text-[rgb(60,80,110)]">Monday–Sunday: 9:00 AM – 10:00 PM</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
