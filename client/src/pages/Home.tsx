@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 
 const heroSlides = [
   {
-    video: "/manus-storage/academy_video1_4f66be6b.mp4",
+    youtubeId: "xU78BXXUIzQ",
     tag: "Programs",
     title: "Master French.\nOpen Doors in Canada.",
     subtitle: "Professional French language programs designed for Canadian immigration, career advancement, and personal growth.",
@@ -19,7 +19,7 @@ const heroSlides = [
     ctaSecondary: { label: "Apply Now", href: "/admissions" },
   },
   {
-    video: "/manus-storage/academy_video2_dc6bb64e.mp4",
+    youtubeId: "pzX4DRv5FAY",
     tag: "Our Campuses",
     title: "Two Campuses.\nOne Community.",
     subtitle: "State-of-the-art learning facilities in Surrey and Kelowna, built for the modern language learner.",
@@ -188,14 +188,19 @@ export default function Home() {
               i === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <video
-              src={s.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover"
-            />
+            {/* Muted YouTube loop as a background. Iframe is oversized and centered so
+                its controls/branding sit outside the frame and it covers like object-cover.
+                youtube-nocookie + no controls/keyboard; navy fill avoids a load flash. */}
+            <div className="absolute inset-0 overflow-hidden" style={{ backgroundColor: 'rgb(9, 39, 88)' }}>
+              <iframe
+                title={s.tag}
+                src={`https://www.youtube-nocookie.com/embed/${s.youtubeId}?autoplay=1&mute=1&loop=1&playlist=${s.youtubeId}&controls=0&modestbranding=1&disablekb=1&rel=0&playsinline=1&iv_load_policy=3&fs=0`}
+                allow="autoplay; encrypted-media"
+                referrerPolicy="strict-origin-when-cross-origin"
+                className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                style={{ width: '177.78vh', height: '100vh', minWidth: '100%', minHeight: '100%' }}
+              />
+            </div>
             <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(9,39,88,0.82) 0%, rgba(9,39,88,0.50) 55%, rgba(9,39,88,0.15) 100%)' }} />
           </div>
         ))}
