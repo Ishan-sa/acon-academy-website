@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "@/components/ui/sonner";
 import FreeSessionPopup from "./components/FreeSessionPopup";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -112,6 +113,7 @@ function App() {
           <Toaster />
           <FreeSessionPopup />
           <Router />
+          <Analytics />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>
