@@ -14,7 +14,13 @@ import AconLogo from "@/components/AconLogo";
 /* Blue accent: oklch(0.48 0.14 255) = #1F6AAD */
 /* Utility bar: oklch(0.13 0.06 255) = #051A40 */
 
-const mainNavItems = [
+type NavItem = {
+  label: string;
+  href: string;
+  dropdown?: { label: string; href: string }[];
+};
+
+const mainNavItems: NavItem[] = [
   {
     label: "About ACON",
     href: "/about",
@@ -36,6 +42,10 @@ const mainNavItems = [
       { label: "French for Youth (Ages 13–18)", href: "/programs/french-for-youth" },
       { label: "Free Trial Classes", href: "/free-classes" },
     ],
+  },
+  {
+    label: "Online Classes",
+    href: "/online-classes",
   },
   {
     label: "Admissions",
@@ -256,22 +266,31 @@ export default function Navigation() {
             {/* Main Nav */}
             {mainNavItems.map((item) => (
               <div key={item.label} className="border-b border-white/10">
-                <button
-                  className="w-full flex items-center justify-between px-5 py-4 text-white font-body font-semibold text-sm"
-                  onClick={() =>
-                    setMobileExpanded(
-                      mobileExpanded === item.label ? null : item.label
-                    )
-                  }
-                >
-                  {item.label}
-                  <ChevronDown
-                    size={16}
-                    className={`transition-transform ${
-                      mobileExpanded === item.label ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+                {item.dropdown ? (
+                  <button
+                    className="w-full flex items-center justify-between px-5 py-4 text-white font-body font-semibold text-sm"
+                    onClick={() =>
+                      setMobileExpanded(
+                        mobileExpanded === item.label ? null : item.label
+                      )
+                    }
+                  >
+                    {item.label}
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform ${
+                        mobileExpanded === item.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block px-5 py-4 text-white font-body font-semibold text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                )}
                 {mobileExpanded === item.label && item.dropdown && (
                   <div className="pb-2" style={{ backgroundColor: 'rgb(5, 26, 64)' }}>
                     {item.dropdown.map((sub) => (
