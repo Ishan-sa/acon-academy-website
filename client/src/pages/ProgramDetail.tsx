@@ -6,6 +6,7 @@ import { ChevronRight, Clock, ArrowRight, CheckCircle } from "lucide-react";
 const programData: Record<string, {
   badge: string; duration: string; title: string; level: string;
   description: string; color: string; overview: string;
+  timeline?: { label: string; text: string }[];
   curriculum: { week: string; topics: string[] }[];
   outcomes: string[];
 }> = {
@@ -13,7 +14,11 @@ const programData: Record<string, {
     badge: "CLB-5", duration: "6 Months", title: "French Foundations Program", level: "A1 / A2",
     description: "Designed for beginners, focusing on everyday communication and workplace readiness.",
     color: "rgb(9, 39, 88)",
-    overview: "The French Foundations Program is ACON Academy's flagship beginner course, designed to take students from zero French knowledge to a confident CLB-5 level. Over four months, you will develop the listening, reading, writing, and speaking skills needed for everyday communication and Canadian workplace environments. This program is particularly valuable for those pursuing Francophone Mobility work permit extensions.",
+    overview: "Achieving CLB 5 is a critical milestone for your Canadian immigration and professional goals. This program is designed to guide you to the B1 level, equipping you with the essential language skills needed to succeed in everyday life, work, and social situations in a French-speaking environment. You will develop the ability to understand key information, communicate independently, and confidently express your opinions and experiences.",
+    timeline: [
+      { label: "Beginners (A1 to B1):", text: "Starting from scratch? Our structured path takes you through A1 (10 weeks) and A2 (8 weeks). Exceptional learners who master the material can be ready for CLB 5 right at the start of B1. For most students, completing the full B1 level requires an additional 9 weeks of dedicated study." },
+      { label: "Exam Focus:", text: "This course is meticulously structured to help you clear the TEF/TCF exams, a vital step for your permanent residency or citizenship applications." },
+    ],
     curriculum: [
       { week: "Months 1–2", topics: ["Alphabet and pronunciation", "Basic greetings and introductions", "Numbers, dates, and time", "Everyday vocabulary (food, family, work)", "Present tense verbs"] },
       { week: "Month 3", topics: ["Workplace communication", "Writing simple emails and messages", "Listening comprehension practice", "Speaking fluency exercises", "Grammar consolidation"] },
@@ -25,7 +30,11 @@ const programData: Record<string, {
     badge: "CLB-7", duration: "10 Months", title: "French Intermediate / Advanced", level: "B1 / B2",
     description: "Build professional fluency and prepare for permanent residence applications.",
     color: "rgb(31, 106, 173)",
-    overview: "The French Intermediate / Advanced Program is designed for students who have basic French knowledge and want to achieve professional-level fluency. Over eight months, you will develop the sophisticated language skills required for permanent residence (PR) applications, professional environments, and TEF/TCF examinations.",
+    overview: "Reaching CLB 7 opens doors to advanced professional opportunities and maximizes your points for Canadian immigration. This B2-level program focuses on advanced comprehension and fluency. You will learn to navigate complex discussions, articulate detailed opinions, and interact comfortably with native speakers in academic and professional settings.",
+    timeline: [
+      { label: "Intermediate to Advanced (B1 to B2):", text: "Building on your existing knowledge, this level challenges you to refine your skills. Top-performing students who have mastered previous levels may be ready for CLB 7 at the beginning of B2. Generally, completing the B2 level takes 8 weeks of intensive learning." },
+      { label: "Exam Focus:", text: "Our curriculum is specifically tailored to ensure you excel in the TEF/TCF exams, giving you the competitive edge needed for your Canadian journey." },
+    ],
     curriculum: [
       { week: "Months 1–3", topics: ["Advanced grammar structures", "Professional vocabulary", "Complex sentence construction", "Business French communication", "Cultural and contextual language use"] },
       { week: "Months 4–6", topics: ["Advanced reading comprehension", "Essay and report writing", "Formal speaking and presentations", "Listening to authentic French media", "Debate and discussion skills"] },
@@ -100,6 +109,20 @@ export default function ProgramDetail() {
             <div className="lg:col-span-2">
               <h2 className="font-display text-3xl font-bold text-[rgb(9,39,88)] mb-5">Program Overview</h2>
               <p className="font-body text-[rgb(40,55,80)] leading-relaxed text-lg mb-10">{program.overview}</p>
+
+              {program.timeline && (
+                <div className="mb-10">
+                  <h3 className="font-display text-2xl font-bold text-[rgb(9,39,88)] mb-5">Timeline to Success</h3>
+                  <ul className="space-y-4">
+                    {program.timeline.map((item) => (
+                      <li key={item.label} className="flex items-start gap-3 font-body text-[rgb(40,55,80)] leading-relaxed">
+                        <CheckCircle size={18} className="text-[rgb(31,106,173)] mt-1 flex-shrink-0" />
+                        <span><strong className="text-[rgb(9,39,88)]">{item.label}</strong> {item.text}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               <h2 className="font-display text-3xl font-bold text-[rgb(9,39,88)] mb-6">Curriculum</h2>
               <div className="space-y-6">
