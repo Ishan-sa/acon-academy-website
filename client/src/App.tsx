@@ -10,19 +10,21 @@ import Programs from "./pages/Programs";
 import ProgramDetail from "./pages/ProgramDetail";
 import Admissions from "./pages/Admissions";
 import Campuses from "./pages/Campuses";
+import SurreyCampus from "./pages/campuses/SurreyCampus";
+import KelownaCampus from "./pages/campuses/KelownaCampus";
 import About from "./pages/About";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
 import StudentLife from "./pages/StudentLife";
 import Contact from "./pages/Contact";
 import FreeClasses from "./pages/FreeClasses";
+import OnlineClasses from "./pages/OnlineClasses";
 import NotFound from "./pages/NotFound";
 import Sitemap from "./pages/Sitemap";
 
 // About sub-pages
 import OurStory from "./pages/about/OurStory";
 import MissionValues from "./pages/about/MissionValues";
-import MediaKit from "./pages/about/MediaKit";
 import Careers from "./pages/about/Careers";
 import Accreditation from "./pages/about/Accreditation";
 
@@ -32,7 +34,7 @@ import EligibilityRequirements from "./pages/admissions/EligibilityRequirements"
 import FeesFinancialAid from "./pages/admissions/FeesFinancialAid";
 import ApplicationDeadlines from "./pages/admissions/ApplicationDeadlines";
 import CampusTours from "./pages/admissions/CampusTours";
-import TransferStudents from "./pages/admissions/TransferStudents";
+import SchoolPolicy from "./pages/admissions/SchoolPolicy";
 
 // Student Life sub-pages
 import AcademicCounselling from "./pages/student-life/AcademicCounselling";
@@ -59,18 +61,20 @@ function Router() {
       <Route path="/programs/:slug" component={ProgramDetail} />
       <Route path="/admissions" component={Admissions} />
       <Route path="/campuses" component={Campuses} />
+      <Route path="/campuses/surrey" component={SurreyCampus} />
+      <Route path="/campuses/kelowna" component={KelownaCampus} />
       <Route path="/about" component={About} />
       <Route path="/news" component={News} />
       <Route path="/news/:slug" component={NewsArticle} />
       <Route path="/student-life" component={StudentLife} />
       <Route path="/contact" component={Contact} />
       <Route path="/free-classes" component={FreeClasses} />
+      <Route path="/online-classes" component={OnlineClasses} />
       <Route path="/sitemap" component={Sitemap} />
 
       {/* About sub-pages */}
       <Route path="/about/our-story" component={OurStory} />
       <Route path="/about/mission-values" component={MissionValues} />
-      <Route path="/about/media-kit" component={MediaKit} />
       <Route path="/about/careers" component={Careers} />
       <Route path="/about/accreditation" component={Accreditation} />
 
@@ -80,7 +84,7 @@ function Router() {
       <Route path="/admissions/fees" component={FeesFinancialAid} />
       <Route path="/admissions/application-deadlines" component={ApplicationDeadlines} />
       <Route path="/admissions/campus-tours" component={CampusTours} />
-      <Route path="/admissions/transfer-students" component={TransferStudents} />
+      <Route path="/admissions/school-policy" component={SchoolPolicy} />
 
       {/* Student Life sub-pages */}
       <Route path="/student-life/academic-counselling" component={AcademicCounselling} />

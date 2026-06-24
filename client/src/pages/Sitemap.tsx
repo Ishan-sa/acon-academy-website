@@ -39,14 +39,15 @@ const sitemapSections = [
       { label: "Fees & Financial Aid", href: "/admissions/fees" },
       { label: "Application Deadlines", href: "/admissions/application-deadlines" },
       { label: "Campus Tours", href: "/admissions/campus-tours" },
-      { label: "Transfer Students", href: "/admissions/transfer-students" },
+      { label: "School Policy", href: "/admissions/school-policy" },
     ],
   },
   {
     title: "Campuses",
     links: [
-      { label: "Surrey Campus", href: "/campuses#surrey" },
-      { label: "Kelowna Campus", href: "/campuses#kelowna" },
+      { label: "All Campuses", href: "/campuses" },
+      { label: "Surrey Campus", href: "/campuses/surrey" },
+      { label: "Kelowna Campus", href: "/campuses/kelowna" },
     ],
   },
   {
@@ -65,7 +66,6 @@ const sitemapSections = [
       { label: "Our Story", href: "/about/our-story" },
       { label: "Mission & Values", href: "/about/mission-values" },
       { label: "Accreditation", href: "/about/accreditation" },
-      { label: "Media Kit", href: "/about/media-kit" },
       { label: "Careers", href: "/about/careers" },
     ],
   },

@@ -5,7 +5,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { ChevronRight, ArrowRight, Calendar, Download } from "lucide-react";
+import { ChevronRight, Calendar, Download } from "lucide-react";
 
 const releases = [
   {
@@ -19,19 +19,6 @@ The 60-day program builds on ACON Academy's existing 30-day intensive preparatio
 "We have seen a significant increase in demand from Express Entry applicants who need CLB 9 or higher for maximum CRS points," said the ACON Academy Director of Programs. "The 60-day program gives students who are starting from CLB 6 or 7 the time they need to reach that target without rushing the process."
 
 The first 60-day cohort begins June 29, 2026, at the Surrey campus. Enrollment is now open. Class sizes are capped at 8 students.`,
-    contact: "info@aconacademy.ca | +1 (877) 359-2035",
-  },
-  {
-    date: "March 18, 2026",
-    title: "ACON Academy Completes PTIB Annual Compliance Review; Registration Confirmed in Good Standing",
-    location: "Surrey, BC",
-    body: `ACON Academy has successfully completed its annual compliance review with the Private Training Institutions Branch (PTIB) of the British Columbia Ministry of Post-Secondary Education and Future Skills. The review, conducted in February and March 2026, confirmed that ACON Academy meets all PTIB requirements for student protection, financial accountability, and program quality.
-
-PTIB registration is a requirement for all private post-secondary institutions operating in British Columbia. The registration process includes a review of institutional policies, financial records, student enrollment agreements, and program delivery standards. ACON Academy's registration has been in good standing since the institution's founding.
-
-"PTIB registration is not just a regulatory requirement — it is a commitment to our students," said the ACON Academy Director. "It means that our students' tuition is protected, our programs meet provincial quality standards, and our institutional practices are transparent and accountable."
-
-ACON Academy's PTIB registration number is available on the PTIB public registry at privatetraininginstitutions.gov.bc.ca.`,
     contact: "info@aconacademy.ca | +1 (877) 359-2035",
   },
   {
@@ -129,17 +116,14 @@ export default function PressReleases() {
         </div>
       </section>
 
-      {/* Media Kit CTA */}
+      {/* Media Inquiries CTA */}
       <section className="py-16 bg-[rgb(9,39,88)]">
         <div className="max-w-[1280px] mx-auto px-4 lg:px-8 text-center">
-          <h2 className="font-display text-3xl font-bold text-white mb-4">Media Kit Available</h2>
-          <p className="text-white/70 font-body text-lg mb-8 max-w-xl mx-auto">Download ACON Academy's media kit for brand assets, institutional fact sheets, and photography guidelines.</p>
+          <h2 className="font-display text-3xl font-bold text-white mb-4">Media Inquiries</h2>
+          <p className="text-white/70 font-body text-lg mb-8 max-w-xl mx-auto">For interview requests, institutional information, or photography assets, please contact our communications team directly.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/about/media-kit" className="bg-[rgb(31,106,173)] hover:bg-[rgb(70,140,210)] text-white font-body font-bold px-7 py-3.5 rounded-sm transition-colors flex items-center gap-2">
-              View Media Kit <ArrowRight size={16} />
-            </Link>
-            <a href="mailto:info@aconacademy.ca?subject=Media Inquiry" className="border border-white/40 hover:border-white text-white font-body font-semibold px-7 py-3.5 rounded-sm transition-colors">
-              Media Inquiry
+            <a href="mailto:info@aconacademy.ca?subject=Media Inquiry" className="bg-[rgb(31,106,173)] hover:bg-[rgb(70,140,210)] text-white font-body font-bold px-7 py-3.5 rounded-sm transition-colors">
+              Contact Our Media Team
             </a>
           </div>
         </div>

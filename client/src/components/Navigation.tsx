@@ -14,7 +14,13 @@ import AconLogo from "@/components/AconLogo";
 /* Blue accent: oklch(0.48 0.14 255) = #1F6AAD */
 /* Utility bar: oklch(0.13 0.06 255) = #051A40 */
 
-const mainNavItems = [
+type NavItem = {
+  label: string;
+  href: string;
+  dropdown?: { label: string; href: string }[];
+};
+
+const mainNavItems: NavItem[] = [
   {
     label: "About ACON",
     href: "/about",
@@ -22,7 +28,6 @@ const mainNavItems = [
       { label: "Our Story", href: "/about/our-story" },
       { label: "Mission & Values", href: "/about/mission-values" },
       { label: "Accreditation", href: "/about/accreditation" },
-      { label: "Media Kit", href: "/about/media-kit" },
       { label: "Careers", href: "/about/careers" },
     ],
   },
@@ -39,6 +44,10 @@ const mainNavItems = [
     ],
   },
   {
+    label: "Online Classes",
+    href: "/online-classes",
+  },
+  {
     label: "Admissions",
     href: "/admissions",
     dropdown: [
@@ -47,18 +56,15 @@ const mainNavItems = [
       { label: "Fees & Financial Aid", href: "/admissions/fees" },
       { label: "Application Deadlines", href: "/admissions/application-deadlines" },
       { label: "Campus Tours", href: "/admissions/campus-tours" },
-      { label: "Transfer Students", href: "/admissions/transfer-students" },
+      { label: "School Policy", href: "/admissions/school-policy" },
     ],
   },
   {
     label: "Campuses",
     href: "/campuses",
     dropdown: [
-      { label: "Surrey Campus", href: "/campuses#surrey" },
-      { label: "Kelowna Campus", href: "/campuses#kelowna" },
-      { label: "Campus Facilities", href: "/campuses#facilities" },
-      { label: "Campus Hours", href: "/campuses#hours" },
-      { label: "Getting Here", href: "/campuses#directions" },
+      { label: "Surrey Campus", href: "/campuses/surrey" },
+      { label: "Kelowna Campus", href: "/campuses/kelowna" },
     ],
   },
   {
@@ -77,10 +83,8 @@ const mainNavItems = [
     href: "/news",
     dropdown: [
       { label: "Latest News", href: "/news" },
-      { label: "Announcements", href: "/news/announcements" },
       { label: "Student Stories", href: "/news/student-stories" },
       { label: "Blog", href: "/news/blog" },
-      { label: "Press Releases", href: "/news/press-releases" },
     ],
   },
 ];
@@ -263,22 +267,31 @@ export default function Navigation() {
             {/* Main Nav */}
             {mainNavItems.map((item) => (
               <div key={item.label} className="border-b border-white/10">
-                <button
-                  className="w-full flex items-center justify-between px-5 py-4 text-white font-body font-semibold text-sm"
-                  onClick={() =>
-                    setMobileExpanded(
-                      mobileExpanded === item.label ? null : item.label
-                    )
-                  }
-                >
-                  {item.label}
-                  <ChevronDown
-                    size={16}
-                    className={`transition-transform ${
-                      mobileExpanded === item.label ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
+                {item.dropdown ? (
+                  <button
+                    className="w-full flex items-center justify-between px-5 py-4 text-white font-body font-semibold text-sm"
+                    onClick={() =>
+                      setMobileExpanded(
+                        mobileExpanded === item.label ? null : item.label
+                      )
+                    }
+                  >
+                    {item.label}
+                    <ChevronDown
+                      size={16}
+                      className={`transition-transform ${
+                        mobileExpanded === item.label ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block px-5 py-4 text-white font-body font-semibold text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                )}
                 {mobileExpanded === item.label && item.dropdown && (
                   <div className="pb-2" style={{ backgroundColor: 'rgb(5, 26, 64)' }}>
                     {item.dropdown.map((sub) => (

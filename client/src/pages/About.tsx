@@ -107,7 +107,7 @@ export default function About() {
                 ACON Academy's programs are aligned with the Canadian Language Benchmarks (CLB) framework and our examination preparation courses are recognized for TEF and TCF certification requirements used in Canadian immigration processes.
               </p>
               <div className="space-y-3">
-                {["Canadian Language Benchmarks (CLB) Aligned", "TEF Exam Preparation Recognized", "TCF Exam Preparation Recognized", "Francophone Mobility Program Compatible", "BC Private Training Institutions Branch (PTIB) Registered"].map((item) => (
+                {["Canadian Language Benchmarks (CLB) Aligned", "TEF Exam Preparation Recognized", "TCF Exam Preparation Recognized", "Francophone Mobility Program Compatible"].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-sm font-body text-white/70">
                     <div className="w-1.5 h-1.5 rounded-full bg-[rgb(31,106,173)] flex-shrink-0" />{item}
                   </div>
@@ -119,67 +119,6 @@ export default function About() {
                 <div className="font-display text-6xl font-bold text-[rgb(31,106,173)] mb-2">CLB</div>
                 <div className="text-white font-body font-semibold">Canadian Language Benchmarks</div>
                 <div className="text-white/50 text-sm font-body mt-1">Aligned Curriculum</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Media Kit */}
-      <section id="media-kit" className="py-20 bg-white">
-        <div className="max-w-[1280px] mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="text-[rgb(31,106,173)] text-xs font-body font-semibold tracking-widest uppercase mb-3">Press & Media</div>
-              <h2 className="font-display text-4xl font-bold text-[rgb(9,39,88)] mb-6 leading-tight">Media Kit</h2>
-              <p className="font-body text-[rgb(40,55,80)] leading-relaxed text-lg mb-5">
-                ACON Academy welcomes media inquiries and partnership opportunities. Our media kit contains everything journalists, content creators, and community partners need to accurately represent our institution.
-              </p>
-              <p className="font-body text-[rgb(40,55,80)] leading-relaxed mb-8">
-                For press releases, interview requests, photography assets, or brand guidelines, please contact our communications team directly at <a href="mailto:info@aconacademy.ca" className="text-[rgb(31,106,173)] hover:underline">info@aconacademy.ca</a>.
-              </p>
-              <div className="space-y-4">
-                {[
-                  { title: "Brand Guidelines", desc: "Official logo, colour palette, and typography standards for ACON Academy." },
-                  { title: "Institutional Photography", desc: "High-resolution images of our campuses, classrooms, and student life." },
-                  { title: "Fact Sheet", desc: "Key statistics, program overview, and institutional background." },
-                  { title: "Press Releases", desc: "Official announcements and news from ACON Academy leadership." },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4 p-4 border border-[rgb(210,225,245)] rounded-sm bg-[rgb(221,236,255)]">
-                    <div className="w-2 h-2 rounded-full bg-[rgb(31,106,173)] mt-2 flex-shrink-0" />
-                    <div>
-                      <div className="font-body font-bold text-[rgb(9,39,88)] text-sm">{item.title}</div>
-                      <div className="text-sm font-body text-[rgb(60,80,110)] mt-0.5">{item.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <Link
-                href="/contact"
-                className="mt-8 inline-flex items-center gap-2 font-body font-bold px-6 py-3 rounded-sm text-white text-sm transition-colors"
-                style={{ backgroundColor: 'rgb(9,39,88)' }}
-              >
-                Contact Our Media Team <ArrowRight size={15} />
-              </Link>
-            </div>
-            <div className="bg-[rgb(9,39,88)] rounded-sm p-10 text-center">
-              <div className="font-display text-5xl font-bold text-white mb-2">ACON</div>
-              <div className="text-[rgb(70,140,210)] font-body font-semibold mb-1">ACADEMY</div>
-              <div className="text-white/50 font-body text-sm italic mb-8">bonjour to fluency™</div>
-              <div className="border-t border-white/10 pt-6 space-y-3 text-left">
-                <div className="text-xs font-body text-white/50 uppercase tracking-widest mb-3">Brand Colours</div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-sm" style={{ backgroundColor: 'rgb(9,39,88)' }} />
-                  <span className="text-white/70 text-sm font-body">Navy — #092758</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-sm" style={{ backgroundColor: 'rgb(31,106,173)' }} />
-                  <span className="text-white/70 text-sm font-body">Blue — #1F6AAD</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-sm border border-white/20" style={{ backgroundColor: 'rgb(255,251,248)' }} />
-                  <span className="text-white/70 text-sm font-body">Warm White — #FFFBF8</span>
-                </div>
               </div>
             </div>
           </div>

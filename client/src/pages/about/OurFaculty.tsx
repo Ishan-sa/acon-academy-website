@@ -41,7 +41,7 @@ const faculty = [
 ];
 
 const standards = [
-  { icon: Award, title: "Government-Certified", desc: "All instructors hold recognized teaching certifications approved by the BC PTIB." },
+  { icon: Award, title: "Government-Certified", desc: "All instructors hold recognized, government-certified teaching certifications." },
   { icon: BookOpen, title: "CLB-Aligned Teaching", desc: "Every lesson maps directly to Canadian Language Benchmark competencies." },
   { icon: Users, title: "Max 12 Students", desc: "Small classes ensure personalized attention and meaningful feedback every session." },
   { icon: GraduationCap, title: "Continuous Development", desc: "Faculty complete annual professional development on TEF/TCF formats and CLB updates." },

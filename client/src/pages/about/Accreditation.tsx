@@ -5,16 +5,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { ChevronRight, ArrowRight, Shield, CheckCircle, Award, FileText } from "lucide-react";
+import { ChevronRight, ArrowRight, CheckCircle, Award, FileText } from "lucide-react";
 
 const accreditations = [
-  {
-    badge: "PTIB",
-    fullName: "BC Private Training Institutions Branch",
-    desc: "ACON Academy is a registered institution with the BC Private Training Institutions Branch (PTIB), the regulatory body that oversees private post-secondary institutions in British Columbia. PTIB registration ensures that ACON meets provincial standards for program quality, institutional governance, financial accountability, and student protection.",
-    significance: "PTIB registration is required for all private post-secondary institutions operating in BC. It provides students with legal protections including the Student Tuition Protection Fund and the right to file complaints with the regulatory body.",
-    details: ["Annual compliance audits", "Student Tuition Protection Fund coverage", "Regulated fee and refund policies", "Institutional governance standards"],
-  },
   {
     badge: "CLB",
     fullName: "Canadian Language Benchmarks Aligned",
@@ -74,14 +67,13 @@ export default function Accreditation() {
                 When you enroll at ACON Academy, you are not just paying for classes — you are investing in a credential pathway that is recognized by the Government of Canada, the Province of British Columbia, and the immigration system.
               </p>
               <p className="font-body text-[rgb(40,55,80)] leading-relaxed mb-5">
-                Our PTIB registration means your tuition is protected. Our CLB alignment means your learning maps directly to immigration requirements. Our TEF and TCF preparation programs are built on official exam specifications — not generic French instruction.
+                Our CLB alignment means your learning maps directly to immigration requirements. Our TEF and TCF preparation programs are built on official exam specifications — not generic French instruction.
               </p>
               <p className="font-body text-[rgb(40,55,80)] leading-relaxed mb-8">
-                Before enrolling at any French language institution, ask whether they are PTIB-registered, CLB-aligned, and examination-preparation certified. At ACON, the answer to all three is yes.
+                Before enrolling at any French language institution, ask whether they are CLB-aligned and examination-preparation certified. At ACON, the answer to both is yes.
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { label: "PTIB Registered", icon: Shield },
                   { label: "CLB Aligned", icon: Award },
                   { label: "TEF Preparation", icon: FileText },
                   { label: "TCF Preparation", icon: CheckCircle },
@@ -102,9 +94,8 @@ export default function Accreditation() {
               <div className="border-t border-white/10 pt-8 space-y-4">
                 {[
                   { label: "Students Served", value: "800+" },
-                  { label: "Years Operating", value: "7+" },
+                  { label: "Years Operating", value: "2+" },
                   { label: "BC Campuses", value: "2" },
-                  { label: "Regulatory Status", value: "PTIB Active" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center justify-between">
                     <span className="text-white/60 font-body text-sm">{item.label}</span>

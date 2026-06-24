@@ -60,7 +60,7 @@ export default function PrivacyPolicy() {
                 <li>Process enrollment applications and schedule placement assessments.</li>
                 <li>Send you relevant information about programs, schedules, financial aid, and upcoming events at ACON Academy.</li>
                 <li>Improve our website, programs, and services based on usage patterns and feedback.</li>
-                <li>Comply with applicable laws and regulations, including those administered by the BC Private Training Institutions Branch (PTIB).</li>
+                <li>Comply with applicable laws and regulations.</li>
                 <li>Maintain records as required for institutional administration and regulatory compliance.</li>
               </ul>
             </div>
@@ -73,14 +73,14 @@ export default function PrivacyPolicy() {
               <ul className="list-disc pl-6 space-y-2 mt-3">
                 <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and delivering our services (e.g., email platforms, CRM systems), subject to confidentiality agreements.</li>
                 <li><strong>Legal Requirements:</strong> We may disclose information if required to do so by law, court order, or governmental authority.</li>
-                <li><strong>Regulatory Compliance:</strong> As a PTIB-registered institution, we may be required to provide certain enrollment and program information to the BC Ministry of Post-Secondary Education and Future Skills.</li>
+                <li><strong>Regulatory Compliance:</strong> We may be required to provide certain enrollment and program information to applicable regulatory or governmental authorities.</li>
               </ul>
             </div>
 
             <div>
               <h2 className="font-display text-2xl font-bold text-[rgb(9,39,88)] mb-4">5. Data Retention</h2>
               <p className="leading-relaxed">
-                We retain personal information for as long as necessary to fulfill the purposes for which it was collected, to comply with legal and regulatory obligations, and to resolve disputes. Enrollment and student records are retained in accordance with PTIB requirements and applicable BC privacy legislation.
+                We retain personal information for as long as necessary to fulfill the purposes for which it was collected, to comply with legal and regulatory obligations, and to resolve disputes. Enrollment and student records are retained in accordance with applicable BC privacy legislation.
               </p>
             </div>
 

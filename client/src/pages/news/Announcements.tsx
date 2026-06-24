@@ -30,13 +30,6 @@ const announcements = [
     tag: null,
   },
   {
-    date: "March 18, 2026",
-    category: "Accreditation",
-    title: "ACON Academy Successfully Completes PTIB Annual Compliance Review",
-    body: "ACON Academy has successfully completed its annual compliance review with the Private Training Institutions Branch (PTIB) of the BC Ministry of Post-Secondary Education and Future Skills. The review confirmed that ACON Academy meets all PTIB requirements for student protection, financial accountability, and program quality. ACON Academy's PTIB registration remains in good standing.",
-    tag: null,
-  },
-  {
     date: "February 28, 2026",
     category: "Community",
     title: "ACON Academy Partners with Surrey Local Immigration Partnership",

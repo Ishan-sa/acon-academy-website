@@ -29,17 +29,14 @@ const footerColumns = [
       { label: "Fees & Financial Aid", href: "/admissions/fees" },
       { label: "Application Deadlines", href: "/admissions/application-deadlines" },
       { label: "Campus Tours", href: "/admissions/campus-tours" },
-      { label: "Transfer Students", href: "/admissions/transfer-students" },
+      { label: "School Policy", href: "/admissions/school-policy" },
     ],
   },
   {
     title: "Campuses",
     links: [
-      { label: "Surrey Campus", href: "/campuses#surrey" },
-      { label: "Kelowna Campus", href: "/campuses#kelowna" },
-      { label: "Campus Facilities", href: "/campuses#facilities" },
-      { label: "Campus Hours", href: "/campuses#hours" },
-      { label: "Getting Here", href: "/campuses#directions" },
+      { label: "Surrey Campus", href: "/campuses/surrey" },
+      { label: "Kelowna Campus", href: "/campuses/kelowna" },
     ],
   },
   {
