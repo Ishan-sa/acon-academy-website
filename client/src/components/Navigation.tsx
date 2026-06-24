@@ -52,8 +52,8 @@ const mainNavItems = [
     label: "Campuses",
     href: "/campuses",
     dropdown: [
-      { label: "Surrey Campus", href: "/campuses#surrey" },
-      { label: "Kelowna Campus", href: "/campuses#kelowna" },
+      { label: "Surrey Campus", href: "/campuses/surrey" },
+      { label: "Kelowna Campus", href: "/campuses/kelowna" },
     ],
   },
   {

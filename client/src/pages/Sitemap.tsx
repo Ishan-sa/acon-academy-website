@@ -44,8 +44,9 @@ const sitemapSections = [
   {
     title: "Campuses",
     links: [
-      { label: "Surrey Campus", href: "/campuses#surrey" },
-      { label: "Kelowna Campus", href: "/campuses#kelowna" },
+      { label: "All Campuses", href: "/campuses" },
+      { label: "Surrey Campus", href: "/campuses/surrey" },
+      { label: "Kelowna Campus", href: "/campuses/kelowna" },
     ],
   },
   {

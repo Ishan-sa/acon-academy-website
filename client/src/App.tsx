@@ -10,6 +10,8 @@ import Programs from "./pages/Programs";
 import ProgramDetail from "./pages/ProgramDetail";
 import Admissions from "./pages/Admissions";
 import Campuses from "./pages/Campuses";
+import SurreyCampus from "./pages/campuses/SurreyCampus";
+import KelownaCampus from "./pages/campuses/KelownaCampus";
 import About from "./pages/About";
 import News from "./pages/News";
 import NewsArticle from "./pages/NewsArticle";
@@ -57,6 +59,8 @@ function Router() {
       <Route path="/programs/:slug" component={ProgramDetail} />
       <Route path="/admissions" component={Admissions} />
       <Route path="/campuses" component={Campuses} />
+      <Route path="/campuses/surrey" component={SurreyCampus} />
+      <Route path="/campuses/kelowna" component={KelownaCampus} />
       <Route path="/about" component={About} />
       <Route path="/news" component={News} />
       <Route path="/news/:slug" component={NewsArticle} />

@@ -34,8 +34,8 @@ const footerColumns = [
   {
     title: "Campuses",
     links: [
-      { label: "Surrey Campus", href: "/campuses#surrey" },
-      { label: "Kelowna Campus", href: "/campuses#kelowna" },
+      { label: "Surrey Campus", href: "/campuses/surrey" },
+      { label: "Kelowna Campus", href: "/campuses/kelowna" },
     ],
   },
   {
