@@ -22,7 +22,6 @@ import Sitemap from "./pages/Sitemap";
 // About sub-pages
 import OurStory from "./pages/about/OurStory";
 import MissionValues from "./pages/about/MissionValues";
-import MediaKit from "./pages/about/MediaKit";
 import Careers from "./pages/about/Careers";
 import Accreditation from "./pages/about/Accreditation";
 
@@ -70,7 +69,6 @@ function Router() {
       {/* About sub-pages */}
       <Route path="/about/our-story" component={OurStory} />
       <Route path="/about/mission-values" component={MissionValues} />
-      <Route path="/about/media-kit" component={MediaKit} />
       <Route path="/about/careers" component={Careers} />
       <Route path="/about/accreditation" component={Accreditation} />
 

@@ -22,7 +22,6 @@ const mainNavItems = [
       { label: "Our Story", href: "/about/our-story" },
       { label: "Mission & Values", href: "/about/mission-values" },
       { label: "Accreditation", href: "/about/accreditation" },
-      { label: "Media Kit", href: "/about/media-kit" },
       { label: "Careers", href: "/about/careers" },
     ],
   },

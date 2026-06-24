@@ -5,7 +5,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { ChevronRight, ArrowRight, Calendar, Download } from "lucide-react";
+import { ChevronRight, Calendar, Download } from "lucide-react";
 
 const releases = [
   {
@@ -116,17 +116,14 @@ export default function PressReleases() {
         </div>
       </section>
 
-      {/* Media Kit CTA */}
+      {/* Media Inquiries CTA */}
       <section className="py-16 bg-[rgb(9,39,88)]">
         <div className="max-w-[1280px] mx-auto px-4 lg:px-8 text-center">
-          <h2 className="font-display text-3xl font-bold text-white mb-4">Media Kit Available</h2>
-          <p className="text-white/70 font-body text-lg mb-8 max-w-xl mx-auto">Download ACON Academy's media kit for brand assets, institutional fact sheets, and photography guidelines.</p>
+          <h2 className="font-display text-3xl font-bold text-white mb-4">Media Inquiries</h2>
+          <p className="text-white/70 font-body text-lg mb-8 max-w-xl mx-auto">For interview requests, institutional information, or photography assets, please contact our communications team directly.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/about/media-kit" className="bg-[rgb(31,106,173)] hover:bg-[rgb(70,140,210)] text-white font-body font-bold px-7 py-3.5 rounded-sm transition-colors flex items-center gap-2">
-              View Media Kit <ArrowRight size={16} />
-            </Link>
-            <a href="mailto:info@aconacademy.ca?subject=Media Inquiry" className="border border-white/40 hover:border-white text-white font-body font-semibold px-7 py-3.5 rounded-sm transition-colors">
-              Media Inquiry
+            <a href="mailto:info@aconacademy.ca?subject=Media Inquiry" className="bg-[rgb(31,106,173)] hover:bg-[rgb(70,140,210)] text-white font-body font-bold px-7 py-3.5 rounded-sm transition-colors">
+              Contact Our Media Team
             </a>
           </div>
         </div>

@@ -300,7 +300,7 @@ export default function News() {
             ))}
           </div>
           <div className="mt-8">
-            <p className="text-sm font-body text-[rgb(60,80,110)]">For media inquiries, contact <a href="mailto:info@aconacademy.ca" className="text-[rgb(31,106,173)] hover:underline">info@aconacademy.ca</a> or visit our <Link href="/about/media-kit" className="text-[rgb(31,106,173)] hover:underline">Media Kit</Link> page.</p>
+            <p className="text-sm font-body text-[rgb(60,80,110)]">For media inquiries, contact <a href="mailto:info@aconacademy.ca" className="text-[rgb(31,106,173)] hover:underline">info@aconacademy.ca</a>.</p>
           </div>
         </div>
       </section>
