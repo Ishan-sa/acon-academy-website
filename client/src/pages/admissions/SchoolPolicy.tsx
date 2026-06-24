@@ -154,9 +154,17 @@ const policies = [
     id: "refund",
     title: "8. Refund Policy",
     content: (
-      <p className="italic text-[rgb(120,140,170)]">
-        The detailed Refund Policy document will be provided separately by the client and will be added here once received.
-      </p>
+      <>
+        <p>
+          A <strong>$1,000 portion of your total course fee is strictly non-refundable</strong>. This amount covers essential costs ACON Academy incurs in processing your enrollment and preparing your access to course resources. Once you are officially enrolled, this $1,000 portion cannot be refunded under any circumstance, including withdrawal, cancellation, non-attendance, or inability to complete the course.
+        </p>
+        <p>Subject to the non-refundable portion described above, the following terms apply:</p>
+        <ul className="!list-none !pl-0 space-y-2">
+          <li><strong>A.</strong> Students who wish to withdraw must notify ACON Academy in writing at least 48 hours before the scheduled start of their first class to receive a full refund, minus the non-refundable $1,000 portion described above.</li>
+          <li><strong>B.</strong> Cancellations made less than 48 hours before class start are not eligible for refunds.</li>
+          <li><strong>C.</strong> If ACON Academy cancels or reschedules a class, students may choose either a full refund or enrollment in a future session of equivalent value.</li>
+        </ul>
+      </>
     ),
   },
 ];
