@@ -83,7 +83,7 @@ const articles: Record<string, Article> = {
     date: "January 25, 2026",
     title: "5 Proven Strategies to Learn French Faster as an Adult Learner",
     readTime: "6 min read",
-    image: "/manus-storage/acon-programs_5457cebd.jpg",
+    image: "/manus-storage/campus_classroom2_63399c3f.jpg",
     content: [
       "Learning a new language as an adult is challenging — but it's far from impossible. In fact, adult learners have several advantages over children: stronger analytical skills, larger existing vocabulary in their first language, and clearer motivation. The key is using the right strategies.",
       "Strategy 1: Focus on High-Frequency Vocabulary. Research shows that just 1,000 words account for approximately 85% of everyday speech. Rather than trying to memorize thousands of words, focus on the most commonly used French vocabulary first. Our instructors at ACON Academy use frequency-based vocabulary lists to maximize learning efficiency.",

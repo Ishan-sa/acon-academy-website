@@ -76,7 +76,7 @@ const articles = [
     date: "January 25, 2026",
     title: "5 Proven Strategies to Learn French Faster as an Adult Learner",
     excerpt: "Adult language learning is different from childhood acquisition — but with the right strategies, adults can achieve remarkable fluency. Our instructors share their top evidence-based techniques.",
-    image: "/manus-storage/acon-programs_5457cebd.jpg",
+    image: "/manus-storage/campus_classroom2_63399c3f.jpg",
     readTime: "6 min read",
   },
   {
@@ -85,7 +85,7 @@ const articles = [
     date: "January 12, 2026",
     title: "Kelowna Campus Expands Weekend Class Offerings for 2026",
     excerpt: "Our Kelowna campus is expanding its Saturday and Sunday class schedule to meet growing demand in the Okanagan region. New morning and afternoon time slots are now available.",
-    image: "/manus-storage/acon-real-hero_067b2e38.webp",
+    image: "/kelowana-campus/1.jpeg",
     readTime: "3 min read",
   },
 ];
