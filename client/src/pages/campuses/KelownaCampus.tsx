@@ -83,13 +83,35 @@ export default function KelownaCampus() {
               </div>
             </div>
             <div>
-              {/* TODO: replace with new Kelowna campus image from Google Drive */}
               <img
-                src="/manus-storage/campus_reception_2757a7ae.jpg"
-                alt="ACON Academy Kelowna Campus"
+                src="/kelowana-campus/4.jpeg"
+                alt="ACON Academy Kelowna Campus building"
                 className="w-full h-[460px] object-cover rounded-sm shadow-xl"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="py-16 bg-white">
+        <div className="max-w-[1280px] mx-auto px-4 lg:px-8">
+          <div className="text-[rgb(31,106,173)] text-xs font-body font-semibold tracking-widest uppercase mb-3">Take a Look</div>
+          <h2 className="font-display text-4xl font-bold text-[rgb(9,39,88)] mb-8">Inside the Kelowna Campus</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { src: "/kelowana-campus/3.jpeg", alt: "Kelowna campus reception" },
+              { src: "/kelowana-campus/1.jpeg", alt: "Kelowna campus classroom with mountain views" },
+              { src: "/kelowana-campus/2.jpeg", alt: "Kelowna campus classroom" },
+              { src: "/kelowana-campus/0.jpeg", alt: "Kelowna campus student lounge" },
+            ].map((img) => (
+              <img
+                key={img.src}
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-56 object-cover rounded-sm shadow-md"
+              />
+            ))}
           </div>
         </div>
       </section>

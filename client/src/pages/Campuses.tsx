@@ -22,7 +22,7 @@ const campuses = [
     href: "/campuses/kelowna",
     address: "1674 Bertram St, Suite #301, Kelowna, BC V1Y 9G4",
     desc: "Serving the Okanagan region with the same high-quality French language education in a beautiful interior BC setting.",
-    img: "/manus-storage/campus_reception_2757a7ae.jpg",
+    img: "/kelowana-campus/4.jpeg",
   },
 ];
 

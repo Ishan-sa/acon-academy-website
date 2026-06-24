@@ -60,8 +60,8 @@ export default function OurStory() {
             </div>
             <div>
               <img
-                src="/manus-storage/campus_classroom2_63399c3f.jpg"
-                alt="ACON Academy classroom"
+                src="/hero-Image.jpeg"
+                alt="A French class in session at ACON Academy"
                 className="w-full h-[500px] object-cover rounded-sm shadow-xl"
               />
             </div>
