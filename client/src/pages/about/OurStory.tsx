@@ -8,13 +8,9 @@ import { Link } from "wouter";
 import { ChevronRight, ArrowRight } from "lucide-react";
 
 const milestones = [
-  { year: "2018", title: "Founded in Surrey, BC", desc: "ACON Academy opens its first campus in Surrey, British Columbia, with a mission to deliver professional-grade French instruction to newcomers and residents across the Lower Mainland." },
-  { year: "2019", title: "CLB-Aligned Curriculum Launched", desc: "We develop and launch our proprietary Canadian Language Benchmark–aligned curriculum, the first of its kind designed specifically for the immigration and citizenship context in BC." },
-  { year: "2020", title: "TEF & TCF Exam Preparation Programs", desc: "In response to growing demand, ACON introduces dedicated TEF Canada and TCF Canada examination preparation programs, achieving an 89% pass rate in the inaugural cohort." },
-  { year: "2022", title: "Kelowna Campus Opens", desc: "We expand to the Okanagan region with the opening of our Kelowna campus, extending access to structured French language education to students across interior BC." },
-  { year: "2023", title: "800+ Students Served", desc: "ACON Academy surpasses 800 enrolled students, with alumni now represented across all major Canadian immigration pathways — Express Entry, PNP, and Francophone Mobility." },
-  { year: "2024", title: "95% Examination Pass Rate", desc: "Our students achieve a 95% aggregate pass rate across TEF and TCF examinations, reflecting the strength of our curriculum and the dedication of our faculty." },
-  { year: "2025", title: "Record Year & Expansion Plans", desc: "ACON records its highest enrollment year to date and announces plans to expand its program offerings and campus facilities to meet growing demand across British Columbia." },
+  { year: "2024", title: "Founded in Surrey, BC", desc: "ACON Academy was established in Surrey, British Columbia, with a mission to deliver high-quality, government-certified French language education to newcomers and professionals across Canada." },
+  { year: "2025", title: "Launched Surrey and Kelowna Campuses", desc: "ACON Academy expanded its physical presence by opening two campuses — one in Surrey, BC, and one in Kelowna, BC — bringing expert-led French instruction to both Metro Vancouver and the Okanagan region." },
+  { year: "2026", title: "Launched High-Tech Curriculum & Live Online Classes Nationwide", desc: "In July 2026, ACON Academy introduced its innovative, high-tech French language curriculum and live online class platform, making professional-grade French education accessible to students across Canada." },
 ];
 
 export default function OurStory() {
@@ -96,7 +92,7 @@ export default function OurStory() {
       <section className="py-20 bg-white">
         <div className="max-w-[1280px] mx-auto px-4 lg:px-8">
           <div className="mb-14">
-            <div className="text-[rgb(31,106,173)] text-xs font-body font-semibold tracking-widest uppercase mb-3">A Decade of Growth</div>
+            <div className="text-[rgb(31,106,173)] text-xs font-body font-semibold tracking-widest uppercase mb-3">Our Journey So Far</div>
             <h2 className="font-display text-4xl font-bold text-[rgb(9,39,88)]">Our Journey, Year by Year</h2>
           </div>
           <div className="relative">
