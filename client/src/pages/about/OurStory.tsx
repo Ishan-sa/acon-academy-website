@@ -33,7 +33,7 @@ export default function OurStory() {
             <span className="text-white">Our Story</span>
           </div>
           <div className="max-w-3xl">
-            <div className="text-[rgb(70,140,210)] text-xs font-body font-semibold tracking-widest uppercase mb-4">Est. 2018 · Surrey, British Columbia</div>
+            <div className="text-[rgb(70,140,210)] text-xs font-body font-semibold tracking-widest uppercase mb-4">Est. 2024 · Surrey, British Columbia</div>
             <h1 className="font-display text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">Our Story</h1>
             <p className="text-white/75 font-body text-xl leading-relaxed">
               From a single classroom in Surrey to British Columbia's most trusted French language academy — the story of ACON is one of purpose, community, and an unwavering belief that language opens doors.
@@ -50,7 +50,7 @@ export default function OurStory() {
               <div className="text-[rgb(31,106,173)] text-xs font-body font-semibold tracking-widest uppercase mb-4">The Beginning</div>
               <h2 className="font-display text-4xl font-bold text-[rgb(9,39,88)] mb-6 leading-tight">Bonjour to Fluency — How It All Started</h2>
               <p className="font-body text-[rgb(40,55,80)] leading-relaxed text-lg mb-5">
-                ACON Academy was founded in 2018 with a singular and urgent observation: thousands of newcomers, permanent residents, and Canadians in British Columbia needed structured, effective French language education — not for cultural enrichment alone, but for real, life-changing outcomes.
+                ACON Academy was founded in 2024 with a singular and urgent observation: thousands of newcomers, permanent residents, and Canadians in British Columbia needed structured, effective French language education — not for cultural enrichment alone, but for real, life-changing outcomes.
               </p>
               <p className="font-body text-[rgb(40,55,80)] leading-relaxed mb-5">
                 The Canadian immigration system rewards French proficiency with significant advantages in the Express Entry system, the Francophone Mobility Program, and the citizenship process. Yet the available options for serious, examination-focused French instruction in BC were limited, expensive, and rarely designed with the immigrant experience in mind.
@@ -78,7 +78,7 @@ export default function OurStory() {
         <div className="max-w-[1280px] mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "2018", label: "Year Founded" },
+              { number: "2024", label: "Year Founded" },
               { number: "800+", label: "Students Served" },
               { number: "95%", label: "Exam Pass Rate" },
               { number: "2", label: "BC Campuses" },
