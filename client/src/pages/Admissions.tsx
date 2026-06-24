@@ -201,7 +201,7 @@ export default function Admissions() {
               <div className="bg-[rgb(9,39,88)] rounded-sm p-7 text-white">
                 <div className="text-[rgb(70,140,210)] text-xs font-body font-semibold tracking-widest uppercase mb-3">Why ACON?</div>
                 <ul className="space-y-3">
-                  {["No application fee — ever","Free CLB placement assessment included","Government-certified instructors","Max 12 students per class","Monthly intake dates — start quickly","95% TEF/TCF examination pass rate","PTIB-registered institution (BC)"].map(item => (
+                  {["Free CLB placement assessment included","Government-certified instructors","Monthly intake dates — start quickly","95% TEF/TCF examination pass rate"].map(item => (
                     <li key={item} className="flex items-start gap-2.5 text-sm font-body text-white/80">
                       <CheckCircle size={14} className="text-[rgb(70,140,210)] flex-shrink-0 mt-0.5" />{item}
                     </li>
