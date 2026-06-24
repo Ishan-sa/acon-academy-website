@@ -112,7 +112,7 @@ export default function CampusTours() {
               <div className="text-[rgb(31,106,173)] text-xs font-body font-semibold tracking-widest uppercase mb-4">Tour Overview</div>
               <h2 className="font-display text-4xl font-bold text-[rgb(9,39,88)] mb-6 leading-tight">What to Expect on Your Tour</h2>
               <p className="font-body text-[rgb(40,55,80)] leading-relaxed text-lg mb-5">
-                ACON Academy campus tours run approximately 60–90 minutes and are led by a member of our admissions team. Tours are available in both English and French.
+                ACON Academy campus tours run approximately 20–30 minutes and are led by a member of our admissions team. Tours are available in both English and French.
               </p>
               <p className="font-body text-[rgb(40,55,80)] leading-relaxed mb-5">
                 During your tour, you will see every area of the campus, have the opportunity to ask questions about programs, fees, and enrollment, and get a feel for the ACON learning environment before you commit.
@@ -122,7 +122,7 @@ export default function CampusTours() {
               </p>
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { label: "Tour Duration", value: "60–90 min", icon: <Clock size={16} className="text-[rgb(31,106,173)] mx-auto mb-1" /> },
+                  { label: "Tour Duration", value: "20–30 min", icon: <Clock size={16} className="text-[rgb(31,106,173)] mx-auto mb-1" /> },
                   { label: "Languages", value: "EN / FR", icon: <Users size={16} className="text-[rgb(31,106,173)] mx-auto mb-1" /> },
                   { label: "Cost", value: "Free", icon: <MapPin size={16} className="text-[rgb(31,106,173)] mx-auto mb-1" /> },
                 ].map((item) => (
