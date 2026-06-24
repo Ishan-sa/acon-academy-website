@@ -9,7 +9,7 @@ import { submitToFormspree } from "@/lib/formspree";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { ChevronRight, CheckCircle, Gift, Users, Briefcase, CreditCard, ArrowRight, Lock } from "lucide-react";
+import { ChevronRight, CheckCircle, Gift, Briefcase, CreditCard, ArrowRight, Lock } from "lucide-react";
 
 const programs = [
   { name: "Beginner French (CLB 1–3)", duration: "12 weeks", hoursPerWeek: "6 hrs/week" },
@@ -27,13 +27,6 @@ const aid = [
     badge: "Need-Based Grant",
     desc: "ACON Academy offers direct financial aid to eligible students enrolled at our Surrey campus. Aid is applied directly to tuition and awarded based on demonstrated financial need. Applications are reviewed on a rolling basis.",
     highlights: ["Applied directly to tuition", "No repayment required", "Rolling applications accepted", "Available at Surrey campus"],
-  },
-  {
-    icon: Users,
-    title: "BC Settlement Funding",
-    badge: "Newcomer Support",
-    desc: "Eligible newcomers to BC may qualify for language training funding through provincial settlement programs. Our admissions team can help you identify whether you qualify and connect you with the right settlement agency.",
-    highlights: ["For recent newcomers to BC", "Permanent residents & refugees eligible", "Referral through settlement agency", "Covers partial or full tuition"],
   },
   {
     icon: Briefcase,
