@@ -72,10 +72,8 @@ const mainNavItems = [
     href: "/news",
     dropdown: [
       { label: "Latest News", href: "/news" },
-      { label: "Announcements", href: "/news/announcements" },
       { label: "Student Stories", href: "/news/student-stories" },
       { label: "Blog", href: "/news/blog" },
-      { label: "Press Releases", href: "/news/press-releases" },
     ],
   },
 ];
