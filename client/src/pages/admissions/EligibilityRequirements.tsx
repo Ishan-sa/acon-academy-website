@@ -14,7 +14,6 @@ const programs = [
     who: "Newcomers and residents with little to no prior French language experience.",
     requirements: [
       "No prior French language experience required",
-      "Minimum age: 18 years",
       "Ability to read and write in at least one language (any language)",
       "Commitment to attend scheduled class sessions",
     ],
@@ -27,7 +26,6 @@ const programs = [
     requirements: [
       "CLB 3 or equivalent prior French knowledge",
       "Ability to understand and produce simple French sentences",
-      "Minimum age: 18 years",
       "CLB placement assessment confirming CLB 3–4 level",
     ],
     idealFor: ["Students who completed a beginner program", "Individuals with some prior French education", "Those targeting CLB 5 for basic immigration requirements"],
@@ -39,7 +37,6 @@ const programs = [
     requirements: [
       "CLB 5 or equivalent confirmed by placement assessment",
       "Ability to understand and produce multi-sentence French communication",
-      "Minimum age: 18 years",
       "Commitment to complete assigned practice outside of class",
     ],
     idealFor: ["Students targeting CLB 7 for Express Entry advantages", "Professionals preparing for francophone workplace environments", "Individuals preparing for TEF/TCF examination"],
@@ -51,7 +48,6 @@ const programs = [
     requirements: [
       "CLB 7 or equivalent confirmed by placement assessment",
       "Strong command of French grammar and vocabulary",
-      "Minimum age: 18 years",
       "Clear articulation of advanced learning goals",
     ],
     idealFor: ["Students targeting CLB 9–10 for citizenship or senior immigration pathways", "Professionals in francophone-dominant industries", "Students preparing for advanced TEF/TCF scores"],
@@ -63,7 +59,6 @@ const programs = [
     requirements: [
       "CLB 6 or higher recommended (CLB 5 minimum with advisor approval)",
       "Confirmed upcoming TEF/TCF examination date (preferred)",
-      "Minimum age: 18 years",
       "High motivation and ability to commit to intensive study schedule",
     ],
     idealFor: ["Express Entry applicants needing TEF/TCF scores", "Citizenship applicants requiring French language proof", "Students who have previously attempted TEF/TCF and need targeted preparation"],
@@ -89,7 +84,7 @@ export default function EligibilityRequirements() {
             <div className="text-[rgb(70,140,210)] text-xs font-body font-semibold tracking-widest uppercase mb-4">Who Can Enroll</div>
             <h1 className="font-display text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">Eligibility Requirements</h1>
             <p className="text-white/75 font-body text-xl leading-relaxed">
-              ACON Academy welcomes students at all levels of French proficiency. Our programs are designed for adult learners aged 18 and over who are pursuing French language education for immigration, citizenship, career, or personal goals.
+              ACON Academy welcomes students at all levels of French proficiency. All ages are welcome — there is no age limit. Our programs serve anyone pursuing French language education for immigration, citizenship, career, or personal goals.
             </p>
           </div>
         </div>
@@ -103,11 +98,11 @@ export default function EligibilityRequirements() {
               <div className="text-[rgb(31,106,173)] text-xs font-body font-semibold tracking-widest uppercase mb-4">General Eligibility</div>
               <h2 className="font-display text-4xl font-bold text-[rgb(9,39,88)] mb-6 leading-tight">Who Can Enroll at ACON Academy</h2>
               <p className="font-body text-[rgb(40,55,80)] leading-relaxed text-lg mb-6">
-                ACON Academy is open to any adult who wishes to learn French. We do not require Canadian citizenship, permanent residency, or any specific immigration status to enroll. Our programs serve newcomers, permanent residents, citizens, and international students alike.
+                ACON Academy is open to anyone who wishes to learn French — all ages are welcome, with no age limit. We do not require Canadian citizenship, permanent residency, or any specific immigration status to enroll. Our programs serve newcomers, permanent residents, citizens, and international students alike.
               </p>
               <div className="space-y-3 mb-8">
                 {[
-                  { label: "Minimum Age", value: "18 years old" },
+                  { label: "Age", value: "All ages welcome — no age limit" },
                   { label: "Immigration Status", value: "No restriction — all statuses welcome" },
                   { label: "Prior French Knowledge", value: "Not required (placement assessment determines level)" },
                   { label: "Language of Instruction", value: "English and French" },
