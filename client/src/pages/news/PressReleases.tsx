@@ -22,19 +22,6 @@ The first 60-day cohort begins June 29, 2026, at the Surrey campus. Enrollment i
     contact: "info@aconacademy.ca | +1 (877) 359-2035",
   },
   {
-    date: "March 18, 2026",
-    title: "ACON Academy Completes PTIB Annual Compliance Review; Registration Confirmed in Good Standing",
-    location: "Surrey, BC",
-    body: `ACON Academy has successfully completed its annual compliance review with the Private Training Institutions Branch (PTIB) of the British Columbia Ministry of Post-Secondary Education and Future Skills. The review, conducted in February and March 2026, confirmed that ACON Academy meets all PTIB requirements for student protection, financial accountability, and program quality.
-
-PTIB registration is a requirement for all private post-secondary institutions operating in British Columbia. The registration process includes a review of institutional policies, financial records, student enrollment agreements, and program delivery standards. ACON Academy's registration has been in good standing since the institution's founding.
-
-"PTIB registration is not just a regulatory requirement — it is a commitment to our students," said the ACON Academy Director. "It means that our students' tuition is protected, our programs meet provincial quality standards, and our institutional practices are transparent and accountable."
-
-ACON Academy's PTIB registration number is available on the PTIB public registry at privatetraininginstitutions.gov.bc.ca.`,
-    contact: "info@aconacademy.ca | +1 (877) 359-2035",
-  },
-  {
     date: "February 28, 2026",
     title: "ACON Academy and Surrey Local Immigration Partnership Announce Formal Referral Partnership",
     location: "Surrey, BC",

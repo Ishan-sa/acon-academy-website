@@ -9,7 +9,7 @@ import { submitToFormspree } from "@/lib/formspree";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
-import { ChevronRight, CheckCircle, Shield, Gift, Users, Briefcase, CreditCard, ArrowRight, Lock } from "lucide-react";
+import { ChevronRight, CheckCircle, Gift, Users, Briefcase, CreditCard, ArrowRight, Lock } from "lucide-react";
 
 const programs = [
   { name: "Beginner French (CLB 1–3)", duration: "12 weeks", hoursPerWeek: "6 hrs/week" },
@@ -131,16 +131,6 @@ export default function FeesFinancialAid() {
               Multiple financial aid options are available to make your French education accessible. Fill in the form below to receive personalized tuition information.
             </p>
           </div>
-        </div>
-      </div>
-
-      {/* PTIB Protection Notice */}
-      <div className="bg-[rgb(31,106,173)] py-5">
-        <div className="max-w-[1280px] mx-auto px-4 lg:px-8 flex items-center gap-3">
-          <Shield size={18} className="text-white flex-shrink-0" />
-          <p className="text-white font-body text-sm">
-            <strong>Student Tuition Protection:</strong> As a PTIB-registered institution, ACON Academy holds all tuition in a designated account until earned. Your tuition is protected under the BC Student Tuition Protection Fund.
-          </p>
         </div>
       </div>
 

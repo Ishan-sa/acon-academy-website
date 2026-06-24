@@ -40,8 +40,8 @@ const values = [
     icon: Shield,
     title: "Integrity & Transparency",
     headline: "We say what we mean and mean what we say.",
-    desc: "ACON Academy operates with full transparency on fees, program outcomes, and institutional policies. We are registered with the BC Private Training Institutions Branch (PTIB) and comply with all regulatory requirements. Our students can trust that the information we provide is accurate, current, and complete.",
-    pillars: ["PTIB-registered institution", "Clear, published fee structures", "Honest program outcome reporting", "Regulatory compliance and accountability"],
+    desc: "ACON Academy operates with full transparency on fees, program outcomes, and institutional policies. Our students can trust that the information we provide is accurate, current, and complete.",
+    pillars: ["Clear, published fee structures", "Honest program outcome reporting", "Regulatory compliance and accountability", "Government-certified instruction"],
   },
   {
     icon: Lightbulb,
@@ -115,7 +115,7 @@ export default function MissionValues() {
                   <h3 className="font-display text-xl font-bold text-[rgb(9,39,88)]">Our Commitment</h3>
                 </div>
                 <p className="text-[rgb(60,80,110)] font-body leading-relaxed">
-                  ACON Academy commits to maintaining PTIB registration, CLB curriculum alignment, and transparent outcome reporting — so every student can trust that their investment in French education will deliver measurable results.
+                  ACON Academy commits to maintaining CLB curriculum alignment and transparent outcome reporting — so every student can trust that their investment in French education will deliver measurable results.
                 </p>
               </div>
             </div>

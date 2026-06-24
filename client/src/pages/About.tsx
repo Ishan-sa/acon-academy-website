@@ -107,7 +107,7 @@ export default function About() {
                 ACON Academy's programs are aligned with the Canadian Language Benchmarks (CLB) framework and our examination preparation courses are recognized for TEF and TCF certification requirements used in Canadian immigration processes.
               </p>
               <div className="space-y-3">
-                {["Canadian Language Benchmarks (CLB) Aligned", "TEF Exam Preparation Recognized", "TCF Exam Preparation Recognized", "Francophone Mobility Program Compatible", "BC Private Training Institutions Branch (PTIB) Registered"].map((item) => (
+                {["Canadian Language Benchmarks (CLB) Aligned", "TEF Exam Preparation Recognized", "TCF Exam Preparation Recognized", "Francophone Mobility Program Compatible"].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-sm font-body text-white/70">
                     <div className="w-1.5 h-1.5 rounded-full bg-[rgb(31,106,173)] flex-shrink-0" />{item}
                   </div>
