@@ -31,7 +31,6 @@ import EligibilityRequirements from "./pages/admissions/EligibilityRequirements"
 import FeesFinancialAid from "./pages/admissions/FeesFinancialAid";
 import ApplicationDeadlines from "./pages/admissions/ApplicationDeadlines";
 import CampusTours from "./pages/admissions/CampusTours";
-import TransferStudents from "./pages/admissions/TransferStudents";
 
 // Student Life sub-pages
 import AcademicCounselling from "./pages/student-life/AcademicCounselling";
@@ -78,7 +77,6 @@ function Router() {
       <Route path="/admissions/fees" component={FeesFinancialAid} />
       <Route path="/admissions/application-deadlines" component={ApplicationDeadlines} />
       <Route path="/admissions/campus-tours" component={CampusTours} />
-      <Route path="/admissions/transfer-students" component={TransferStudents} />
 
       {/* Student Life sub-pages */}
       <Route path="/student-life/academic-counselling" component={AcademicCounselling} />

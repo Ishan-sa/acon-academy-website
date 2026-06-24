@@ -47,7 +47,6 @@ const faqs = [
   { q: "Are there any eligibility requirements for the class?", a: "Most programs are open to all adult learners (18+) regardless of prior French knowledge. The Intermediate/Advanced program requires a basic foundation in French (A1 level or equivalent). The French for Youth program is for students aged 13–18. A placement assessment may be conducted to ensure you are placed in the right program." },
   { q: "When is the application deadline?", a: "ACON Academy accepts rolling admissions throughout the year. New batches start regularly, so you can apply at any time. We recommend applying at least 2 weeks before your desired start date to ensure placement in your preferred class schedule." },
   { q: "Are there opportunities for campus tours or open houses?", a: "Yes! We offer campus tours at both our Surrey and Kelowna locations. You can book a tour through our website or by calling our admissions office. We also host monthly open house events where prospective students can meet instructors and current students." },
-  { q: "What is the admissions process for transfer students?", a: "Students transferring from another French language program can apply with their previous transcripts or language assessment results. Our academic team will review your prior learning and place you in the appropriate program level. Credit for prior learning may be considered on a case-by-case basis." },
   { q: "What class schedules are available?", a: "We offer morning, afternoon, and evening classes on weekdays and weekends. Specific schedules include: Wed/Thurs Noon Class (11:30am–1pm), Thurs/Fri Evening Class (8–9:30pm), Sat/Sun Evening Class (8–9:30pm), Mon/Tues Morning Class (9:30–11am). Kelowna offers Wed/Thurs and Sat/Sun options." },
 ];
 
@@ -337,63 +336,6 @@ export default function Admissions() {
               <Link href="/contact" className="inline-flex items-center gap-2 bg-[rgb(9,39,88)] text-white font-body font-semibold text-sm px-5 py-2.5 rounded-sm hover:bg-[rgb(20,50,100)] transition-colors">
                 Book a Tour <ArrowRight size={14} />
               </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Transfer Students */}
-      <section id="transfer" className="py-20 bg-white">
-        <div className="max-w-[1280px] mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <div className="text-[rgb(31,106,173)] text-xs font-body font-semibold tracking-widest uppercase mb-3">Existing Students</div>
-              <h2 className="font-display text-4xl font-bold text-[rgb(9,39,88)] mb-6">Transfer Students</h2>
-              <p className="font-body text-[rgb(40,55,80)] leading-relaxed text-lg mb-5">
-                Already studying French at another institution? ACON Academy welcomes transfer students from other language programs. We assess your prior learning and place you at the right level so you don't repeat content you've already mastered.
-              </p>
-              <div className="space-y-5 mb-8">
-                {[
-                  { title: "Prior Learning Assessment", desc: "Submit transcripts or assessment results from your previous institution. Our academic team reviews your level and recommends the appropriate program." },
-                  { title: "Credit for Prior Learning", desc: "Depending on your prior coursework and demonstrated proficiency, partial credit toward program completion may be considered on a case-by-case basis." },
-                  { title: "Seamless Transition", desc: "Our admissions team works with you to ensure a smooth transition, including schedule alignment and orientation support." },
-                  { title: "No Gap in Learning", desc: "We schedule transfers to align with the start of a new module wherever possible, so you can integrate naturally into your cohort." },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-4">
-                    <CheckCircle size={20} className="text-[rgb(31,106,173)] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <div className="font-body font-semibold text-[rgb(9,39,88)] mb-1">{item.title}</div>
-                      <div className="text-sm font-body text-[rgb(60,80,110)] leading-relaxed">{item.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <Link href="/contact" className="inline-flex items-center gap-2 bg-[rgb(9,39,88)] text-white font-body font-bold px-7 py-3.5 rounded-sm hover:bg-[rgb(20,50,100)] transition-colors">
-                Inquire About Transfer <ArrowRight size={16} />
-              </Link>
-            </div>
-            <div className="space-y-5">
-              <div className="bg-[rgb(221,236,255)] border border-[rgb(210,225,245)] rounded-sm p-7">
-                <h3 className="font-display text-xl font-bold text-[rgb(9,39,88)] mb-3">What to Submit</h3>
-                <ul className="space-y-2.5">
-                  {[
-                    "Official transcript or letter from your previous institution",
-                    "Any language assessment results (CLB, TEF, TCF, DELF, or equivalent)",
-                    "Brief description of courses completed and hours of instruction",
-                    "Contact information for your previous school (for verification)",
-                  ].map((item) => (
-                    <li key={item} className="flex items-start gap-2.5 text-sm font-body text-[rgb(40,55,80)]">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[rgb(31,106,173)] mt-1.5 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="bg-[rgb(9,39,88)] rounded-sm p-7 text-white">
-                <h3 className="font-display text-xl font-bold mb-3">Transfer Intake Timeline</h3>
-                <p className="text-white/70 font-body text-sm leading-relaxed mb-4">Transfer assessments are completed within 3–5 business days of receiving your documents. You will receive a written placement recommendation and program offer by email.</p>
-                <a href="mailto:info@aconacademy.ca" className="text-[rgb(70,140,210)] font-body font-semibold text-sm hover:text-white transition-colors">info@aconacademy.ca →</a>
-              </div>
             </div>
           </div>
         </div>

@@ -39,7 +39,6 @@ const sitemapSections = [
       { label: "Fees & Financial Aid", href: "/admissions/fees" },
       { label: "Application Deadlines", href: "/admissions/application-deadlines" },
       { label: "Campus Tours", href: "/admissions/campus-tours" },
-      { label: "Transfer Students", href: "/admissions/transfer-students" },
     ],
   },
   {
