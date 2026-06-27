@@ -177,6 +177,9 @@ export default function FreeClasses() {
               <span className="text-[rgb(100,170,240)]">90-Minute</span><br />
               French Class
             </h1>
+            <p className="font-body text-white/80 text-base lg:text-lg leading-relaxed mt-6 max-w-xl">
+              Need an earlier TCF or TEF exam date? Enroll with Acon Academy and our team will help you check available options.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
