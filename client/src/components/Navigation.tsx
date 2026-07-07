@@ -9,6 +9,7 @@ import { useState, useRef, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { ChevronDown, Menu, X, Phone, Mail, Search } from "lucide-react";
 import AconLogo from "@/components/AconLogo";
+import SearchOverlay from "@/components/SearchOverlay";
 
 /* Navy: oklch(0.19 0.08 255) = #092758 */
 /* Blue accent: oklch(0.48 0.14 255) = #1F6AAD */
@@ -94,11 +95,17 @@ const audienceLinks = [
   { label: "Current Students", href: "/student-life" },
 ];
 
-export default function Navigation() {
+/**
+ * Navigation.
+ * @param minimal When true, renders a logo-only header (no links, search, or CTA).
+ *   Used on lead-capture landing pages to keep visitors focused on the form.
+ */
+export default function Navigation({ minimal = false }: { minimal?: boolean } = {}) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [location] = useLocation();
   const navRef = useRef<HTMLElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -123,8 +130,25 @@ export default function Navigation() {
     closeTimer.current = setTimeout(() => setActiveDropdown(null), 150);
   };
 
+  // Minimal, distraction-free header for lead-capture landing pages: logo only.
+  if (minimal) {
+    return (
+      <nav style={{ backgroundColor: "rgb(9, 39, 88)" }}>
+        <div className="max-w-[1280px] mx-auto px-4 lg:px-8">
+          <div className="flex items-center justify-center h-16 lg:h-[72px]">
+            <Link href="/" className="flex items-center flex-shrink-0" aria-label="ACON Academy home">
+              <AconLogo variant="white" showTagline={true} />
+            </Link>
+          </div>
+        </div>
+      </nav>
+    );
+  }
+
   return (
     <>
+      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
+
       {/* Utility Bar — darkest navy #051A40 */}
       <div className="hidden lg:block" style={{ backgroundColor: 'rgb(5, 26, 64)' }}>
         <div className="max-w-[1280px] mx-auto px-8 flex items-center justify-between h-9">
@@ -222,7 +246,11 @@ export default function Navigation() {
 
             {/* CTA + Search */}
             <div className="hidden lg:flex items-center gap-3">
-              <button className="text-white/80 hover:text-white transition-colors p-2">
+              <button
+                className="text-white/80 hover:text-white transition-colors p-2"
+                onClick={() => setSearchOpen(true)}
+                aria-label="Search"
+              >
                 <Search size={18} />
               </button>
               <Link
@@ -310,6 +338,12 @@ export default function Navigation() {
             ))}
 
             <div className="p-4 border-t border-white/10">
+              <button
+                onClick={() => { setMobileOpen(false); setSearchOpen(true); }}
+                className="w-full flex items-center justify-center gap-2 text-white/90 font-body font-semibold py-3 mb-3 rounded-sm border border-white/20 hover:bg-white/10 transition-colors"
+              >
+                <Search size={16} /> Search
+              </button>
               <div className="flex justify-center mb-4">
                 <AconLogo variant="white" showTagline={true} />
               </div>

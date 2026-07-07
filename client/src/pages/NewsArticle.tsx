@@ -3,8 +3,10 @@
  */
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import Markdown from "@/components/Markdown";
 import { Link, useParams } from "wouter";
 import { ChevronRight, Calendar, Clock, ArrowRight, Tag } from "lucide-react";
+import { blogPosts } from "@/lib/blogPosts";
 
 type Article = {
   category: string;
@@ -96,7 +98,7 @@ const articles: Record<string, Article> = {
   },
 };
 
-const relatedArticles = [
+const legacyRelated = [
   { slug: "tef-vs-tcf", title: "TEF vs. TCF: Which French Exam Should You Take?", category: "Blog" },
   { slug: "clb-explained", title: "Canadian Language Benchmarks Explained", category: "Blog" },
   { slug: "5-tips-faster-french", title: "5 Proven Strategies to Learn French Faster", category: "Blog" },
@@ -104,7 +106,39 @@ const relatedArticles = [
 
 export default function NewsArticle() {
   const { slug } = useParams<{ slug: string }>();
-  const article = articles[slug || ""] || articles["why-french-for-pr"];
+
+  // SEO blog posts (markdown body) take priority, then legacy hand-written articles.
+  const blogPost = blogPosts.find((p) => p.slug === slug);
+  const legacy = !blogPost ? articles[slug || ""] : undefined;
+
+  // Fall back to a known article if the slug matches nothing.
+  const fallback = articles["why-french-for-pr"];
+  const article = blogPost
+    ? {
+        kind: "markdown" as const,
+        category: blogPost.category,
+        date: blogPost.date,
+        title: blogPost.title,
+        readTime: blogPost.readTime,
+        image: blogPost.image,
+        markdown: blogPost.content,
+      }
+    : {
+        kind: "paragraphs" as const,
+        category: (legacy || fallback).category,
+        date: (legacy || fallback).date,
+        title: (legacy || fallback).title,
+        readTime: (legacy || fallback).readTime,
+        image: (legacy || fallback).image,
+        paragraphs: (legacy || fallback).content,
+      };
+
+  // Related: prefer other SEO posts; fall back to legacy list.
+  const relatedArticles = blogPosts
+    .filter((p) => p.slug !== slug)
+    .slice(0, 3)
+    .map((p) => ({ slug: p.slug, title: p.title, category: p.category }));
+  const related = relatedArticles.length ? relatedArticles : legacyRelated;
 
   return (
     <div className="min-h-screen flex flex-col bg-[rgb(255,251,248)]">
@@ -147,13 +181,17 @@ export default function NewsArticle() {
                 alt={article.title}
                 className="w-full h-80 object-cover rounded-sm mb-10"
               />
-              <div className="prose max-w-none">
-                {article.content.map((paragraph, i) => (
-                  <p key={i} className="font-body text-[rgb(40,55,80)] leading-relaxed text-lg mb-6">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
+              {article.kind === "markdown" ? (
+                <Markdown content={article.markdown} />
+              ) : (
+                <div className="prose max-w-none">
+                  {article.paragraphs.map((paragraph, i) => (
+                    <p key={i} className="font-body text-[rgb(40,55,80)] leading-relaxed text-lg mb-6">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              )}
 
               {/* CTA within article */}
               <div className="mt-12 bg-[rgb(9,39,88)] rounded-sm p-8">
@@ -175,7 +213,7 @@ export default function NewsArticle() {
               <div className="bg-white border border-[rgb(210,225,245)] rounded-sm p-6 mb-6">
                 <h4 className="font-display font-bold text-[rgb(9,39,88)] mb-4">Related Articles</h4>
                 <div className="space-y-4">
-                  {relatedArticles.filter(a => a.slug !== slug).map((a) => (
+                  {related.filter(a => a.slug !== slug).map((a) => (
                     <Link key={a.slug} href={`/news/${a.slug}`}>
                       <div className="group border-b border-[rgb(210,225,245)] pb-4 last:border-0 last:pb-0">
                         <div className="text-xs font-body text-[rgb(31,106,173)] font-semibold mb-1">{a.category}</div>

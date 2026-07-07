@@ -123,7 +123,7 @@ export default function FreeSessionPopup() {
             {/* Benefits */}
             <ul className="space-y-2.5 mb-6">
               {[
-                "Live class with a government-certified French instructor",
+                "Live class with a certified French instructor",
                 "Max 12 students — personalized attention guaranteed",
                 "Available at Surrey & Kelowna campuses",
                 "No credit card required — 100% free",

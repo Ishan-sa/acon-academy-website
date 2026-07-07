@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { ChevronRight, ArrowRight, Calendar, Tag } from "lucide-react";
+import { blogPosts } from "@/lib/blogPosts";
 
 const articles = [
   {
@@ -254,19 +255,15 @@ export default function News() {
             <p className="text-[rgb(60,80,110)] font-body text-lg max-w-2xl">In-depth guides, language tips, and immigration insights from the ACON Academy team.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { title: "Why French Language Skills Are a Game-Changer for Canadian PR Applications", date: "March 15, 2026", readTime: "6 min read", slug: "why-french-for-pr" },
-              { title: "TEF vs. TCF: Which French Exam Should You Take for Canadian Immigration?", date: "March 5, 2026", readTime: "7 min read", slug: "tef-vs-tcf" },
-              { title: "Canadian Language Benchmarks (CLB) Explained: A Complete Guide for Newcomers", date: "February 20, 2026", readTime: "8 min read", slug: "clb-explained" },
-              { title: "The Francophone Mobility Work Permit: How French Opens Doors to Canadian Employment", date: "February 8, 2026", readTime: "5 min read", slug: "francophone-mobility" },
-            ].map((post) => (
+            {blogPosts.map((post) => (
               <Link href={`/news/${post.slug}`} key={post.slug}>
-                <div className="bg-white border border-[rgb(210,225,245)] rounded-sm p-6 hover:border-[rgb(31,106,173)] transition-colors group">
+                <div className="bg-white border border-[rgb(210,225,245)] rounded-sm p-6 hover:border-[rgb(31,106,173)] transition-colors group h-full flex flex-col">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-body text-[rgb(60,80,110)]">{post.readTime}</span>
                     <span className="text-xs font-body text-[rgb(60,80,110)]">{post.date}</span>
                   </div>
                   <h3 className="font-display text-lg font-bold text-[rgb(9,39,88)] leading-tight group-hover:text-[rgb(31,106,173)] transition-colors">{post.title}</h3>
+                  <p className="text-sm font-body text-[rgb(40,55,80)] leading-relaxed mt-3 flex-1">{post.excerpt}</p>
                   <div className="mt-4 text-xs font-body font-semibold text-[rgb(31,106,173)] flex items-center gap-1">Read Article <ArrowRight size={12} /></div>
                 </div>
               </Link>

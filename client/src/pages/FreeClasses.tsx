@@ -5,8 +5,8 @@
  */
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Link } from "wouter";
-import { ChevronRight, CheckCircle, ArrowRight, Calendar, Users, Star, Shield, Clock, Award } from "lucide-react";
+import { useLocation } from "wouter";
+import { CheckCircle, ArrowRight, Calendar, Users, Star, Shield, Clock, Award } from "lucide-react";
 import { useState, useRef } from "react";
 import { toast } from "sonner";
 import { submitToFormspree } from "@/lib/formspree";
@@ -70,7 +70,7 @@ export default function FreeClasses() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
   const [submitting, setSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [, setLocation] = useLocation();
 
   const scrollToForm = () => {
     formRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -131,7 +131,7 @@ export default function FreeClasses() {
     const ok = await submitToFormspree(form, "Free Classes Registration");
     setSubmitting(false);
     if (ok) {
-      setSubmitted(true);
+      setLocation("/free-classes/thank-you");
     } else {
       toast.error("Something went wrong. Please try again or email us at info@aconacademy.ca.");
     }
@@ -148,7 +148,7 @@ export default function FreeClasses() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[rgb(255,251,248)]">
-      <Navigation />
+      <Navigation minimal />
 
       {/* ── HERO: Split layout — copy left, form right ── */}
       <section className="bg-[rgb(9,39,88)] relative overflow-hidden">
@@ -159,13 +159,6 @@ export default function FreeClasses() {
         }} />
 
         <div className="max-w-[1280px] mx-auto px-4 lg:px-8 py-16 lg:py-20 relative z-10">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-white/40 text-xs font-body mb-8">
-            <Link href="/" className="hover:text-white/70 transition-colors">Home</Link>
-            <ChevronRight size={12} />
-            <span className="text-white/60">Free Trial Classes</span>
-          </div>
-
           {/* Badge + heading above the form */}
           <div className="mb-8">
             <div className="inline-flex items-center gap-2 bg-[rgb(31,106,173)]/25 border border-[rgb(31,106,173)]/40 rounded-sm px-3 py-1.5 mb-5">
@@ -186,21 +179,7 @@ export default function FreeClasses() {
 
             {/* Left: The Form — comes first for easy access */}
             <div ref={formRef} className="bg-white rounded-sm shadow-2xl overflow-hidden order-first">
-              {submitted ? (
-                <div className="p-10 text-center">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5">
-                    <CheckCircle size={32} className="text-green-600" />
-                  </div>
-                  <h3 className="font-display text-2xl font-bold text-[rgb(9,39,88)] mb-3">You're Registered!</h3>
-                  <p className="font-body text-[rgb(60,80,110)] mb-6">
-                    We'll send your confirmation and class details to <strong>{form.email}</strong> within 2 hours. Check your spam folder if you don't see it.
-                  </p>
-                  <p className="text-sm font-body text-[rgb(60,80,110)]">
-                    Questions? Call us at <a href="tel:+18773592035" className="text-[rgb(31,106,173)] font-semibold">+1 (877) 359-2035</a>
-                  </p>
-                </div>
-              ) : (
-                <>
+              <>
                   <div className="bg-[rgb(9,39,88)] px-7 py-5">
                     <h2 className="font-display text-xl font-bold text-white">Reserve Your Free Spot</h2>
                     <p className="text-white/60 font-body text-sm mt-1">Takes 2 minutes · Spots fill fast</p>
@@ -421,7 +400,6 @@ export default function FreeClasses() {
                     </p>
                   </form>
                 </>
-              )}
             </div>
 
             {/* Right: Trust signals + stats */}

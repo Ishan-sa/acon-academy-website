@@ -18,6 +18,7 @@ import NewsArticle from "./pages/NewsArticle";
 import StudentLife from "./pages/StudentLife";
 import Contact from "./pages/Contact";
 import FreeClasses from "./pages/FreeClasses";
+import FreeClassesThankYou from "./pages/FreeClassesThankYou";
 import OnlineClasses from "./pages/OnlineClasses";
 import NotFound from "./pages/NotFound";
 import Sitemap from "./pages/Sitemap";
@@ -68,6 +69,7 @@ function Router() {
       <Route path="/news/:slug" component={NewsArticle} />
       <Route path="/student-life" component={StudentLife} />
       <Route path="/contact" component={Contact} />
+      <Route path="/free-classes/thank-you" component={FreeClassesThankYou} />
       <Route path="/free-classes" component={FreeClasses} />
       <Route path="/online-classes" component={OnlineClasses} />
       <Route path="/sitemap" component={Sitemap} />
