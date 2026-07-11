@@ -122,7 +122,7 @@ export default function OurStory() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <img
-                src="/manus-storage/campus_reception_2757a7ae.jpg"
+                src="/manus-storage/acon-reception.png"
                 alt="Students collaborating"
                 className="w-full h-[420px] object-cover rounded-sm shadow-lg"
               />

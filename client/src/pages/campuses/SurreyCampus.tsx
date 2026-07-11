@@ -85,7 +85,7 @@ export default function SurreyCampus() {
             <div>
               {/* TODO: replace with new Surrey campus image from Google Drive */}
               <img
-                src="/manus-storage/campus_reception2_35c233e0.jpg"
+                src="/manus-storage/acon-reception.png"
                 alt="ACON Academy Surrey Campus"
                 className="w-full h-[460px] object-cover rounded-sm shadow-xl"
               />

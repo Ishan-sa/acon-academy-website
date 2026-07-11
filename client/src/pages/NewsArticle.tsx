@@ -37,7 +37,7 @@ const articles: Record<string, Article> = {
     date: "March 15, 2026",
     title: "Why French Language Skills Are a Game-Changer for Canadian PR Applications",
     readTime: "6 min read",
-    image: "/manus-storage/campus_reception2_35c233e0.jpg",
+    image: "/manus-storage/acon-reception.png",
     content: [
       "Canada's immigration system rewards bilingualism. If you're applying for permanent residence through Express Entry, having strong French language skills can dramatically increase your Comprehensive Ranking System (CRS) score — sometimes by as much as 30–50 points.",
       "Under the Federal Skilled Worker Program and the Canadian Experience Class, applicants who demonstrate proficiency in both English and French receive additional CRS points. The exact number of bonus points depends on your French proficiency level, but even a CLB-5 in French can provide a meaningful boost to your score.",
@@ -53,7 +53,7 @@ const articles: Record<string, Article> = {
     date: "March 5, 2026",
     title: "TEF vs. TCF: Which French Exam Should You Take for Canadian Immigration?",
     readTime: "7 min read",
-    image: "/manus-storage/campus_reception_2757a7ae.jpg",
+    image: "/manus-storage/acon-reception.png",
     content: [
       "When applying for Canadian permanent residence or citizenship, you'll need to demonstrate French language proficiency through an approved test. The two tests accepted by Immigration, Refugees and Citizenship Canada (IRCC) are the TEF Canada and the TCF Canada. But which one should you choose?",
       "The TEF Canada (Test d'Évaluation de Français) is administered by the Paris Chamber of Commerce and Industry (CCIP). It is widely recognized and has been used for Canadian immigration purposes for many years. The TEF assesses all four language skills: listening, reading, writing, and speaking.",

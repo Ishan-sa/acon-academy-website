@@ -19,7 +19,7 @@ const heroSlides = [
     ctaSecondary: { label: "Apply Now", href: "/admissions" },
   },
   {
-    youtubeId: "pzX4DRv5FAY",
+    youtubeId: "S_RZ_MniDEM",
     tag: "Our Campuses",
     title: "Two Campuses.\nOne Community.",
     subtitle: "State-of-the-art learning facilities in Surrey and Kelowna, built for the modern language learner.",
@@ -122,7 +122,7 @@ const newsItems = [
     title: "Extended Campus Hours Now in Effect at Surrey",
     excerpt: "Due to increased demand for campus services, all Surrey campus facilities are now available to students until 11:00 PM on weekdays.",
     href: "/news/extended-hours",
-    image: "/manus-storage/campus_reception_2757a7ae.jpg",
+    image: "/manus-storage/acon-reception.png",
   },
   {
     category: "Student Success",
@@ -475,7 +475,7 @@ export default function Home() {
             <AnimatedSection>
               <div className="relative">
                 <img
-                  src="/manus-storage/acon-classroom-whiteboard.png"
+                  src="/manus-storage/acon-student-stock.png"
                   alt="French language learning at ACON Academy"
                   className="w-full h-[480px] object-cover rounded-sm shadow-xl"
                 />
@@ -631,7 +631,7 @@ export default function Home() {
       {/* CTA Banner */}
       <section className="relative py-20 overflow-hidden">
         <img
-          src="/manus-storage/campus_reception2_35c233e0.jpg"
+          src="/manus-storage/acon-reception.png"
           alt="ACON Academy campus"
           className="absolute inset-0 w-full h-full object-cover"
         />

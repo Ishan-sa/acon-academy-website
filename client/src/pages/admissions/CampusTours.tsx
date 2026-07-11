@@ -136,7 +136,7 @@ export default function CampusTours() {
             </div>
             <div>
               <img
-                src="/manus-storage/campus_reception2_35c233e0.jpg"
+                src="/manus-storage/acon-reception.png"
                 alt="ACON Academy campus"
                 className="w-full h-[450px] object-cover rounded-sm shadow-xl"
               />

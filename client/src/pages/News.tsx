@@ -23,7 +23,7 @@ const articles = [
     date: "April 6, 2026",
     title: "Extended Campus Hours Now in Effect at Surrey",
     excerpt: "Due to increased demand for campus services, all Surrey campus facilities are now available to students until 11:00 PM on weekdays.",
-    image: "/manus-storage/campus_reception_2757a7ae.jpg",
+    image: "/manus-storage/acon-reception.png",
     readTime: "2 min read",
   },
   {
@@ -41,7 +41,7 @@ const articles = [
     date: "March 15, 2026",
     title: "Why French Language Skills Are a Game-Changer for Canadian PR Applications",
     excerpt: "Understanding how French proficiency can significantly boost your Express Entry Comprehensive Ranking System (CRS) score and open pathways to permanent residence in Canada.",
-    image: "/manus-storage/campus_reception2_35c233e0.jpg",
+    image: "/manus-storage/acon-reception.png",
     readTime: "6 min read",
   },
   {
@@ -50,7 +50,7 @@ const articles = [
     date: "March 5, 2026",
     title: "TEF vs. TCF: Which French Exam Should You Take for Canadian Immigration?",
     excerpt: "A comprehensive comparison of the two main French language proficiency exams accepted by Immigration, Refugees and Citizenship Canada (IRCC) — and how to choose the right one for your goals.",
-    image: "/manus-storage/campus_reception_2757a7ae.jpg",
+    image: "/manus-storage/acon-reception.png",
     readTime: "7 min read",
   },
   {
@@ -68,7 +68,7 @@ const articles = [
     date: "February 8, 2026",
     title: "The Francophone Mobility Work Permit: How French Opens Doors to Canadian Employment",
     excerpt: "The Francophone Mobility Program allows French-speaking foreign nationals to work in Canada outside of Quebec without a Labour Market Impact Assessment. Here's how to qualify.",
-    image: "/manus-storage/campus_reception2_35c233e0.jpg",
+    image: "/manus-storage/acon-reception.png",
     readTime: "5 min read",
   },
   {

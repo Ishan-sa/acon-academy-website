@@ -14,7 +14,7 @@ const campuses = [
     href: "/campuses/surrey",
     address: "13764 72 Ave, Suite #203, Surrey, BC V3W 2P2",
     desc: "Our flagship campus in the heart of Metro Vancouver's most diverse city, with modern classrooms, study spaces, and extended evening hours.",
-    img: "/manus-storage/campus_reception2_35c233e0.jpg",
+    img: "/manus-storage/acon-reception.png",
   },
   {
     eyebrow: "Campus 02 · Okanagan",
