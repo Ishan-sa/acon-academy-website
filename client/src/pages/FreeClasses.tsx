@@ -20,7 +20,6 @@ type FormData = {
   campus: string;
   frenchLevel: string;
   goal: string;
-  howHeard: string;
   canadianStatus: string;
   availability: string;
 };
@@ -65,7 +64,7 @@ export default function FreeClasses() {
   const [form, setForm] = useState<FormData>({
     firstName: "", lastName: "", email: "", phone: "",
     campus: "", frenchLevel: "", goal: "",
-    howHeard: "", canadianStatus: "", availability: "",
+    canadianStatus: "", availability: "",
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [touched, setTouched] = useState<Partial<Record<keyof FormData, boolean>>>({});
@@ -352,25 +351,6 @@ export default function FreeClasses() {
                       {touched.availability && errors.availability && (
                         <p className="text-red-500 text-xs mt-1 font-body">{errors.availability}</p>
                       )}
-                    </div>
-
-                    {/* How did you hear */}
-                    <div>
-                      <label className="block text-xs font-body font-semibold text-[rgb(40,55,80)] mb-1.5 uppercase tracking-wide">How did you hear about us?</label>
-                      <select
-                        value={form.howHeard}
-                        onChange={e => handleChange("howHeard", e.target.value)}
-                        className={inputClass("howHeard")}
-                      >
-                        <option value="">Select (optional)</option>
-                        <option value="google">Google Search</option>
-                        <option value="instagram">Instagram</option>
-                        <option value="facebook">Facebook</option>
-                        <option value="youtube">YouTube</option>
-                        <option value="friend">Friend or Family Referral</option>
-                        <option value="settlement">Settlement Agency</option>
-                        <option value="other">Other</option>
-                      </select>
                     </div>
 
                     {/* Submit */}
