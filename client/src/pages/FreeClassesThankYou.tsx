@@ -4,12 +4,32 @@
  * Its own URL lets Google Ads / Analytics fire a conversion event on pageview.
  * Navigation is minimal (logo only), matching the landing page.
  */
+import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Link } from "wouter";
 import { CheckCircle, ArrowRight, Phone } from "lucide-react";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 export default function FreeClassesThankYou() {
+  // Fire conversion events on pageview (this page only).
+  useEffect(() => {
+    // Google Ads conversion
+    window.gtag?.("event", "conversion", {
+      send_to: "AW-16973818211/jbZaCJW8ucAcEOPS350_",
+      value: 1.0,
+      currency: "CAD",
+    });
+    // Meta (Facebook) Lead event
+    window.fbq?.("track", "Lead");
+  }, []);
+
   return (
     <div className="min-h-screen flex flex-col bg-[rgb(255,251,248)]">
       <Navigation minimal />
